@@ -117,3 +117,11 @@ MonoBehaviour:
   uvX: 0
   uvY: 0
   divUv: 0
+  a: 0.25
+  b: 0.25
+  c: 0.75
+  d: 0.25
+  e: 0.25
+  f: 0.75
+  g: 0.75
+  h: 0.75

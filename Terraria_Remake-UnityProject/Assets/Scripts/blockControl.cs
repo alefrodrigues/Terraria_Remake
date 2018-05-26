@@ -13,6 +13,15 @@ public class blockControl : MonoBehaviour {
 	public float uvX;
 	public float uvY;
 	public float divUv;
+
+	public float a;
+	public float b;
+	public float c;
+	public float d;
+	public float e;
+	public float f;
+	public float g;
+	public float h;
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
 		pMesh = GetComponent<proceduralMesh>();
@@ -24,7 +33,7 @@ public class blockControl : MonoBehaviour {
 	}
 	void Update(){
 		if(updateMesh){
-			pMesh.updateUv(mesh,uvX,uvY,divUv);
+			pMesh.updateUv(mesh,a,b,c,d,e,f,g,h);
 			updateMesh = false;
 		}
 	}

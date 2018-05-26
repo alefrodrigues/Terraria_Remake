@@ -17,10 +17,10 @@ public class proceduralMesh : MonoBehaviour{
 			};
 
 			uvs = new Vector2[]{
-				new Vector2(0,0),
-				new Vector2(0,1),
-				new Vector2(1,0),
-				new Vector2(1,1)
+				new Vector2(0f, 0f),
+				new Vector2(0f, 0.20f),
+				new Vector2(0.20f, 0f),
+				new Vector2(0.20f, 0.20f)
 			};
 			//Definir orden de construcao dos triangulos
 			triangulos = new int[]{0,1,2,2,1,3};
@@ -40,21 +40,16 @@ public class proceduralMesh : MonoBehaviour{
 		}
 		
 	}
-	public void updateUv(Mesh _mesh,float _uvX,float _uvY,float divUv){
-		Vector2[] _uvs = _mesh.uv;
-		_uvs[0] = new Vector2(_uvs[0].x/_uvX,_uvs[0].y/_uvY);
-		_uvs[1] = new Vector2(_uvs[1].x/_uvX,_uvs[1].y/_uvY);
-		_uvs[2] = new Vector2(_uvs[2].x/_uvX,_uvs[2].y/_uvY);
-		_uvs[3] = new Vector2(_uvs[3].x/_uvX,_uvs[3].y/_uvY);
+	// mover o MAPA UVw de acordo com os vertices , utilizar apenas numeros entre 0 e 1(USAR PLANO CARTESIANO COMO BASE)//
+	public void updateUv(Mesh _mesh,float _a,float _b,float _c,float _d,float _e,float _f,float _g,float _h){
+		uvs = new Vector2[]{
+				new Vector2(_a, _b),
+				new Vector2(_c, _d),
+				new Vector2(_e, _f),
+				new Vector2(_g, _h)
+			};
 
-		/*_uvs = new Vector2[]{
-				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
-				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
-				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
-				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv)
-		};*/
-		uvs = _uvs;
-		createMesh(_mesh);
+		_mesh.uv = uvs;
 	}
 	public void clearMesh(Mesh _mesh){
 		if(vertices.Length > 0){
