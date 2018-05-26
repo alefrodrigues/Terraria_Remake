@@ -213,10 +213,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 631ce597157d6be4eb2add3acc108790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldSizeX: 200
-  worldSizeY: 100
+  worldSizeX: 20
+  worldSizeY: 10
   block: {fileID: 1802516829369708, guid: 7752cbc96d072344a9664bd1f7a0bd07, type: 2}
-  startCreate: 0
+  startCreate: 1
 --- !u!4 &1881455135
 Transform:
   m_ObjectHideFlags: 0

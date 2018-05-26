@@ -8,6 +8,11 @@ public class blockControl : MonoBehaviour {
 	public Transform player;
 	public Vector3 positionMeshData;
 	public int posTriangles;
+
+	public bool updateMesh;
+	public float uvX;
+	public float uvY;
+	public float divUv;
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
 		pMesh = GetComponent<proceduralMesh>();
@@ -18,6 +23,9 @@ public class blockControl : MonoBehaviour {
 		pMesh.createMesh(mesh);
 	}
 	void Update(){
-		
+		if(updateMesh){
+			pMesh.updateUv(mesh,uvX,uvY,divUv);
+			updateMesh = false;
+		}
 	}
 }

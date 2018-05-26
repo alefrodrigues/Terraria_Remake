@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 470bc898c25ece44fb1ae4aa4a135c40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,3 +113,7 @@ MonoBehaviour:
   player: {fileID: 0}
   positionMeshData: {x: 0, y: 0, z: 0}
   posTriangles: 0
+  updateMesh: 0
+  uvX: 0
+  uvY: 0
+  divUv: 0

@@ -40,6 +40,22 @@ public class proceduralMesh : MonoBehaviour{
 		}
 		
 	}
+	public void updateUv(Mesh _mesh,float _uvX,float _uvY,float divUv){
+		Vector2[] _uvs = _mesh.uv;
+		_uvs[0] = new Vector2(_uvs[0].x/_uvX,_uvs[0].y/_uvY);
+		_uvs[1] = new Vector2(_uvs[1].x/_uvX,_uvs[1].y/_uvY);
+		_uvs[2] = new Vector2(_uvs[2].x/_uvX,_uvs[2].y/_uvY);
+		_uvs[3] = new Vector2(_uvs[3].x/_uvX,_uvs[3].y/_uvY);
+
+		/*_uvs = new Vector2[]{
+				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
+				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
+				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv),
+				new Vector2(_uvs[0].x/divUv,_uvs[0].y/divUv)
+		};*/
+		uvs = _uvs;
+		createMesh(_mesh);
+	}
 	public void clearMesh(Mesh _mesh){
 		if(vertices.Length > 0){
 			_mesh.Clear();
