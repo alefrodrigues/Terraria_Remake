@@ -14,6 +14,8 @@ public class proceduralGrid : MonoBehaviour {
 
 	public Vector3 gridOffSet;
 	public int gridSize;
+	public int gridSizeX;
+	public int gridSizeY;
 	public float cellSize = 1;
 
 	void Awake(){
@@ -32,8 +34,8 @@ public class proceduralGrid : MonoBehaviour {
 	
 	void makeDiscreteGrid () {
 		//Set array sizes
-		vertices = new Vector3[gridSize * gridSize * 4];
-		triangles = new int[gridSize * gridSize * 6];
+		vertices = new Vector3[gridSizeX * gridSizeY * 4];
+		triangles = new int[gridSizeX * gridSizeY * 6];
 
 		//Set trackers integer 
 		int v = 0;
@@ -43,8 +45,8 @@ public class proceduralGrid : MonoBehaviour {
 		float VertexOffSet = cellSize * 0.5f;
 
 		//Create vertex grid
-		for(int x = 0; x < gridSize; x++){
-			for(int y = 0; y < gridSize; y++){
+		for(int x = 0; x < gridSizeX; x++){
+			for(int y = 0; y < gridSizeY; y++){
 				Vector3 cellOffSet = new Vector3(x * cellSize,0,y * cellSize);
 
 				vertices[v] = new Vector3( -VertexOffSet, 0, -VertexOffSet ) + cellOffSet + gridOffSet;
