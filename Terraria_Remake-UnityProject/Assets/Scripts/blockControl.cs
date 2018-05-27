@@ -14,26 +14,23 @@ public class blockControl : MonoBehaviour {
 	public float uvY;
 	public float divUv;
 
-	public float a;
-	public float b;
-	public float c;
-	public float d;
-	public float e;
-	public float f;
-	public float g;
-	public float h;
+	public Vector2 v1;
+	public Vector2 v2;
+	public Vector2 v3;
+	public Vector2 v4;
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
 		pMesh = GetComponent<proceduralMesh>();
 		player = GameObject.FindWithTag("Player").transform;
 	}
 	void Start () {
-		pMesh.makeMeshData(positionMeshData,posTriangles);
+		/*pMesh.makeMeshData(positionMeshData,posTriangles);
 		pMesh.createMesh(mesh);
+		pMesh.updateUv(mesh,v1,v2,v3,v4);*/
 	}
 	void Update(){
 		if(updateMesh){
-			pMesh.updateUv(mesh,a,b,c,d,e,f,g,h);
+			//pMesh.updateUv(mesh,v1,v2,v3,v4);
 			updateMesh = false;
 		}
 	}
