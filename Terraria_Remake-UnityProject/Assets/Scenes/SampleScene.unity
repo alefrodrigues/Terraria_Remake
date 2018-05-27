@@ -221,7 +221,7 @@ MonoBehaviour:
   triangles: 
   uvs: []
   gridOffSet: {x: 0, y: 0, z: 0}
-  gridSize: 2048
+  gridSize: 10
   cellSize: 1
 --- !u!33 &808143458
 MeshFilter:
