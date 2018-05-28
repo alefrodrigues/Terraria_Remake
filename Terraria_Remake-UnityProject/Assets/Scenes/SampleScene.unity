@@ -221,9 +221,13 @@ MonoBehaviour:
   triangles: 
   uvs: []
   gridOffSet: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   gridSize: 100
   gridSizeX: 800
   gridSizeY: 400
+=======
+  gridSize: 2048
+>>>>>>> parent of 90549a0... Reenvio
   cellSize: 1
 --- !u!33 &808143458
 MeshFilter:
