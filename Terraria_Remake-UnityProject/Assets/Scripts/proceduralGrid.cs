@@ -6,6 +6,7 @@ public class proceduralGrid : MonoBehaviour {
 
 	public List <Vector2> uvList = new List <Vector2>();
 
+	public MeshCollider meshCollider;
 	public Mesh mesh;
 	public Vector3[] vertices;
 	public int[] triangles;
@@ -13,17 +14,18 @@ public class proceduralGrid : MonoBehaviour {
 
 
 	public Vector3 gridOffSet;
-	public int gridSize;
 	public int gridSizeX;
 	public int gridSizeY;
 	public float cellSize = 1;
 
+	public Transform player;
+
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
+		GetComponent<MeshCollider>().sharedMesh = mesh;
 	}
 	void Start () {
-		
-		
+
 	}
 	void Update(){
 		if(Input.GetKeyDown(KeyCode.Space)){
@@ -47,24 +49,19 @@ public class proceduralGrid : MonoBehaviour {
 		//Create vertex grid
 		for(int x = 0; x < gridSizeX; x++){
 			for(int y = 0; y < gridSizeY; y++){
-				Vector3 cellOffSet = new Vector3(x * cellSize,0,y * cellSize);
+				Vector3 cellOffSet = new Vector3(x * cellSize,y * cellSize, 0);
 
-				vertices[v] = new Vector3( -VertexOffSet, 0, -VertexOffSet ) + cellOffSet + gridOffSet;
-				vertices[v+1] = new Vector3( -VertexOffSet, 0, VertexOffSet ) + cellOffSet  + gridOffSet;
-				vertices[v+2] = new Vector3( VertexOffSet, 0, -VertexOffSet ) + cellOffSet  + gridOffSet;
-				vertices[v+3] = new Vector3( VertexOffSet, 0, VertexOffSet ) + cellOffSet  + gridOffSet;
+				vertices[v] = new Vector3( -VertexOffSet, -VertexOffSet, 0 ) + cellOffSet + gridOffSet;
+				vertices[v+1] = new Vector3( -VertexOffSet, VertexOffSet, 0 ) + cellOffSet  + gridOffSet;
+				vertices[v+2] = new Vector3( VertexOffSet, -VertexOffSet, 0 ) + cellOffSet  + gridOffSet;
+				vertices[v+3] = new Vector3( VertexOffSet, VertexOffSet, 0 ) + cellOffSet  + gridOffSet;
 
 				triangles[t] = v;
 				triangles[t+1] = triangles[t+4] = v+ 1;
 				triangles[t+2] = triangles[t+3] = v+ 2;
 				triangles[t+5] = v + 3;
 
-				if(y < gridSize -1){
-					setUvBlock(4);
-				}else {
-					setUvBlock(3);
-				}
-				
+				setUvBlock(4);
 
 				v += 4;
 				t += 6;
@@ -79,7 +76,6 @@ public class proceduralGrid : MonoBehaviour {
 		mesh.triangles = triangles;
 		mesh.uv = uvList.ToArray();
 		mesh.RecalculateNormals();
-
 	}
 
 	void setUvBlock (int _idTypeBloco) {
