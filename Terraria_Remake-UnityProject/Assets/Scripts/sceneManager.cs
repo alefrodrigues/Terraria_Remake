@@ -10,5 +10,7 @@ public class sceneManager : MonoBehaviour {
 		transform.Translate(Input.GetAxis("Horizontal")* moveSpeed*Time.fixedDeltaTime,
 							Input.GetAxis("Vertical")* moveSpeed*Time.fixedDeltaTime,
 							0);
+
+		
 	}
 }
