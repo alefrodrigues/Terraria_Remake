@@ -128,7 +128,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -209,6 +209,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2422091
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -238,7 +243,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-300
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -319,6 +324,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &3521498
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -348,7 +358,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -372,8 +382,13 @@ MonoBehaviour:
   gridOffSet: {x: 0, y: 0, z: 0}
   gridSizeX: 100
   gridSizeY: 100
-  cellSize: 1
+  cellSize: 1.5
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 1019980169}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!23 &9832320
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -458,7 +473,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-800
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -539,6 +554,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &19272339
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -568,7 +588,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -649,6 +669,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &24957116
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -678,7 +703,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -759,6 +784,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &25676684
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -788,7 +818,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -869,6 +899,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &53672169
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -898,7 +933,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -979,6 +1014,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &59536954
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1008,7 +1048,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1089,6 +1129,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &60471400
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1118,7 +1163,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1199,6 +1244,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &67000920
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1228,7 +1278,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1309,6 +1359,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &68491415
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1338,7 +1393,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1419,6 +1474,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &92924846
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1448,7 +1508,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1529,6 +1589,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &102117140
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1558,7 +1623,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1639,6 +1704,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &102474544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1668,7 +1738,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1749,6 +1819,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &104483815
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1778,7 +1853,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1859,6 +1934,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &106789022
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1888,7 +1968,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -1969,6 +2049,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &118263207
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2040,7 +2125,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2121,6 +2206,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &127391861
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2150,7 +2240,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2231,6 +2321,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &156310701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2260,7 +2355,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2341,6 +2436,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &172184807
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2370,7 +2470,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2451,6 +2551,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &181957947
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2480,7 +2585,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2561,6 +2666,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &182482119
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2590,7 +2700,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2671,6 +2781,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &184408760
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2700,7 +2815,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2781,6 +2896,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &188400954
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2810,7 +2930,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -2891,6 +3011,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &193929136
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2920,7 +3045,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3001,6 +3126,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &211694606
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3030,7 +3160,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3111,6 +3241,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &232930379
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3140,7 +3275,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3221,6 +3356,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &249182132
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3250,7 +3390,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-900
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3331,6 +3471,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &257372878
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3360,7 +3505,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-200
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3441,6 +3586,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &260327768
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3470,7 +3620,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-900
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3551,6 +3701,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &264780488
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3580,7 +3735,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-1000
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3661,6 +3816,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &267408295
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3690,7 +3850,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3771,6 +3931,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &270630325
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3800,7 +3965,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3881,6 +4046,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &279554813
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3910,7 +4080,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -3991,6 +4161,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &281124152
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4020,7 +4195,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-400
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4101,6 +4276,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &281846231
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4130,7 +4310,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-900
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4211,6 +4391,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &301541552
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4240,7 +4425,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4321,6 +4506,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &332311237
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4350,7 +4540,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4431,6 +4621,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &335463782
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4460,7 +4655,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-500
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4541,6 +4736,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &336282888
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4570,7 +4770,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4651,6 +4851,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &345450791
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4680,7 +4885,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4761,6 +4966,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &350521843
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4790,7 +5000,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4871,6 +5081,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &371807052
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4900,7 +5115,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-400
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -4981,6 +5196,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &383597599
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5010,7 +5230,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5091,6 +5311,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &389763997
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5120,7 +5345,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5201,6 +5426,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &401958172
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5230,7 +5460,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5311,6 +5541,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &404031533
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5340,7 +5575,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5421,6 +5656,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &421269548
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5450,7 +5690,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5531,6 +5771,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &426540107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5560,7 +5805,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5641,6 +5886,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &436517711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5670,7 +5920,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5751,6 +6001,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &461906347
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5780,7 +6035,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5861,6 +6116,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &462073673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5890,7 +6150,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -5971,6 +6231,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &465744778
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6000,7 +6265,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6081,6 +6346,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &470183721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6110,7 +6380,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-200
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6191,6 +6461,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &479647417
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6220,7 +6495,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-700
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6301,6 +6576,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &501260477
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6330,7 +6610,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-700
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6411,6 +6691,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &518067204
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6440,7 +6725,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6521,6 +6806,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &528217701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6550,7 +6840,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6631,6 +6921,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &534023579
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6660,7 +6955,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6741,6 +7036,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &544833670
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6770,7 +7070,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-200
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6851,6 +7151,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &547267399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6880,7 +7185,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-800
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -6961,6 +7266,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &573256893
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6990,7 +7300,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7071,6 +7381,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &577050701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7100,7 +7415,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7181,6 +7496,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &587310258
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7210,7 +7530,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-600
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7291,6 +7611,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &595092338
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7320,7 +7645,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7401,6 +7726,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &597022937
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7430,7 +7760,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7511,6 +7841,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &597353802
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7540,7 +7875,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7621,6 +7956,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &601770359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7650,7 +7990,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7731,6 +8071,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &607797561
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7760,7 +8105,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7841,6 +8186,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &645777432
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7870,7 +8220,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -7951,6 +8301,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &661704399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7980,7 +8335,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8061,6 +8416,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &674026242
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8090,7 +8450,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8171,6 +8531,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &688419600
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8200,7 +8565,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8281,6 +8646,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &697339941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8310,7 +8680,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8391,6 +8761,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &701785298
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8420,7 +8795,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8501,6 +8876,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &715271967
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8530,7 +8910,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8611,6 +8991,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &718451846
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8640,7 +9025,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8721,6 +9106,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &721387499
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8750,7 +9140,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8831,6 +9221,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &735286167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8860,7 +9255,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-300
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -8941,6 +9336,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &751535701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8970,7 +9370,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9051,6 +9451,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &767727614
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9080,7 +9485,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9161,6 +9566,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &771673667
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9190,7 +9600,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-600
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9271,6 +9681,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &786026438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9300,7 +9715,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9381,6 +9796,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &795285934
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9410,7 +9830,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9491,6 +9911,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &840739663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9520,7 +9945,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9601,6 +10026,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &841049095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9630,7 +10060,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9711,6 +10141,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &846499901
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9740,7 +10175,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9821,6 +10256,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &858374894
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9850,7 +10290,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -9931,6 +10371,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &859434615
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9960,7 +10405,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10041,6 +10486,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &861638335
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10070,7 +10520,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10151,6 +10601,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &876625718
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10180,7 +10635,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10261,6 +10716,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &889214041
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10290,7 +10750,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10371,6 +10831,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &904901586
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10400,7 +10865,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10481,6 +10946,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &905189462
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10510,7 +10980,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10591,6 +11061,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &928115855
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10620,7 +11095,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10701,6 +11176,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &931198864
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10730,7 +11210,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10811,6 +11291,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &945387560
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10840,7 +11325,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -10921,6 +11406,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &962586101
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10950,7 +11440,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11031,6 +11521,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &967982414
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11060,7 +11555,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11141,6 +11636,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &985866366
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11180,7 +11680,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019980165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 121259832}
@@ -11219,7 +11719,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -11251,7 +11751,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11332,6 +11832,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1089534166
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11361,7 +11866,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-700
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11442,6 +11947,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1091544730
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11471,7 +11981,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11552,6 +12062,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1093968514
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11581,7 +12096,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-800
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11662,6 +12177,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1143479658
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11691,7 +12211,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11772,6 +12292,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1147683796
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11801,7 +12326,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11882,6 +12407,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1154639594
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11911,7 +12441,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-500
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -11992,6 +12522,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1158790477
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12021,7 +12556,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12102,6 +12637,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1180297240
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12131,7 +12671,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12212,6 +12752,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1194953768
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12241,7 +12786,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-900
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12322,6 +12867,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1206300935
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12351,7 +12901,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12432,6 +12982,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1206584736
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12461,7 +13016,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12542,6 +13097,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1227720359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12799,7 +13359,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12880,6 +13440,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1242740674
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12909,7 +13474,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-700
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -12990,6 +13555,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1243327527
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13019,7 +13589,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13100,6 +13670,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1252586866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13129,7 +13704,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13210,6 +13785,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1254873058
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13239,7 +13819,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13320,6 +13900,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1260873522
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13349,7 +13934,7 @@ GameObject:
   m_Layer: 0
   m_Name: 0-600
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13430,6 +14015,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1282375770
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13459,7 +14049,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-1000
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13540,6 +14130,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1283452600
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13569,7 +14164,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13650,6 +14245,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1300790752
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13679,7 +14279,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13760,6 +14360,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1319254905
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13789,7 +14394,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13870,6 +14475,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1323431316
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13899,7 +14509,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -13980,6 +14590,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1341029128
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14009,7 +14624,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14090,6 +14705,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1345464454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14119,7 +14739,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14200,6 +14820,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1365289454
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14229,7 +14854,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14310,6 +14935,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1386522531
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14339,7 +14969,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14420,6 +15050,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1393172575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14449,7 +15084,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14530,6 +15165,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1428190508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14559,7 +15199,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14640,6 +15280,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1432725322
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14669,7 +15314,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14750,6 +15395,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1444729107
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14779,7 +15429,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14860,6 +15510,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1453424409
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14889,7 +15544,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -14970,6 +15625,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1458931263
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14999,7 +15659,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15080,6 +15740,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1473211928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15109,7 +15774,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15190,6 +15855,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1474667241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15219,7 +15889,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15300,6 +15970,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1481511535
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15329,7 +16004,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-800
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15410,6 +16085,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1482584519
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15439,7 +16119,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-1000
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15520,6 +16200,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1506545956
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15549,7 +16234,7 @@ GameObject:
   m_Layer: 0
   m_Name: 13-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15630,6 +16315,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1511070394
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15659,7 +16349,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15740,6 +16430,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1517318765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15769,7 +16464,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15850,6 +16545,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1518380726
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15879,7 +16579,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -15960,6 +16660,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1519688742
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15989,7 +16694,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16070,6 +16775,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1524958663
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16099,7 +16809,7 @@ GameObject:
   m_Layer: 0
   m_Name: 9-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16180,6 +16890,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1542914740
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16209,7 +16924,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16290,6 +17005,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1554886100
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16319,7 +17039,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-500
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16400,6 +17120,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1556420030
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16429,7 +17154,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16510,6 +17235,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1564261851
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16539,7 +17269,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16620,6 +17350,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1585764493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16649,7 +17384,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16730,6 +17465,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1602257229
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16759,7 +17499,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-200
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16840,6 +17580,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1614205882
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16869,7 +17614,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -16950,6 +17695,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1619106954
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16979,7 +17729,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17060,6 +17810,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1620449069
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17089,7 +17844,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17170,6 +17925,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1643488767
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17199,7 +17959,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17280,6 +18040,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1646775453
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17309,7 +18074,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17390,6 +18155,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1649579327
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17419,7 +18189,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17500,6 +18270,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1663727469
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17529,7 +18304,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17610,6 +18385,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1674054508
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17639,7 +18419,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-300
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17720,6 +18500,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1677700367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17749,7 +18534,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17830,6 +18615,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1682583431
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17859,7 +18649,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -17940,6 +18730,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1698737492
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17969,7 +18764,7 @@ GameObject:
   m_Layer: 0
   m_Name: 6-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18050,6 +18845,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1709044312
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18079,7 +18879,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18160,6 +18960,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1715301783
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18189,7 +18994,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18270,6 +19075,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1742482006
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18299,7 +19109,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18380,6 +19190,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1756213737
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18409,7 +19224,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18490,6 +19305,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1765875842
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18519,7 +19339,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18600,6 +19420,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1780436593
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18629,7 +19454,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18710,6 +19535,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1802800903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18739,7 +19569,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18820,6 +19650,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1833613146
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18849,7 +19684,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-500
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -18930,6 +19765,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1839746024
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18959,7 +19799,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-300
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19040,6 +19880,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1866671298
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19069,7 +19914,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19150,6 +19995,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1871031033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19179,7 +20029,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19260,6 +20110,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1871491948
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19289,7 +20144,7 @@ GameObject:
   m_Layer: 0
   m_Name: 10-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19370,6 +20225,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1898381406
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19399,7 +20259,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19480,6 +20340,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1902758554
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19509,7 +20374,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19590,6 +20455,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1912325027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19619,7 +20489,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-600
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19700,6 +20570,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1936070812
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19729,7 +20604,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19810,6 +20685,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1949499781
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19839,7 +20719,7 @@ GameObject:
   m_Layer: 0
   m_Name: 1-400
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -19920,6 +20800,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1955751179
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19949,7 +20834,7 @@ GameObject:
   m_Layer: 0
   m_Name: 5-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20030,6 +20915,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1967771242
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20059,7 +20949,7 @@ GameObject:
   m_Layer: 0
   m_Name: 18-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20140,6 +21030,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1968980963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20169,7 +21064,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20250,6 +21145,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1973442898
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20279,7 +21179,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20360,6 +21260,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &1990809073
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20389,7 +21294,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-400
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20470,6 +21375,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2000600967
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20499,7 +21409,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20580,6 +21490,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2002362163
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20609,7 +21524,7 @@ GameObject:
   m_Layer: 0
   m_Name: 7-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20690,6 +21605,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2007536647
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20719,7 +21639,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20800,6 +21720,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2021991545
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20829,7 +21754,7 @@ GameObject:
   m_Layer: 0
   m_Name: 19-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -20910,6 +21835,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2024759509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -20939,7 +21869,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21020,6 +21950,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2034626528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21049,7 +21984,7 @@ GameObject:
   m_Layer: 0
   m_Name: 2-1000
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21130,6 +22065,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2044235662
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21159,7 +22099,7 @@ GameObject:
   m_Layer: 0
   m_Name: 3-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21240,6 +22180,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2065235404
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21269,7 +22214,7 @@ GameObject:
   m_Layer: 0
   m_Name: 12-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21350,6 +22295,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2066392187
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21379,7 +22329,7 @@ GameObject:
   m_Layer: 0
   m_Name: 4-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21460,6 +22410,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2082513933
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21489,7 +22444,7 @@ GameObject:
   m_Layer: 0
   m_Name: 16-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21570,6 +22525,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2082659082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21599,7 +22559,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21680,6 +22640,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2083536543
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21709,7 +22674,7 @@ GameObject:
   m_Layer: 0
   m_Name: 17-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21790,6 +22755,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2092226203
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21819,7 +22789,7 @@ GameObject:
   m_Layer: 0
   m_Name: 15-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -21900,6 +22870,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2092935167
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21929,7 +22904,7 @@ GameObject:
   m_Layer: 0
   m_Name: 14-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -22010,6 +22985,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2096788085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22039,7 +23019,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -22120,6 +23100,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2126989367
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22149,7 +23134,7 @@ GameObject:
   m_Layer: 0
   m_Name: 11-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -22230,6 +23215,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2135646181
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22259,7 +23249,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -22340,6 +23330,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2140458844
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22369,7 +23364,7 @@ GameObject:
   m_Layer: 0
   m_Name: 8-100
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
@@ -22450,6 +23445,11 @@ MonoBehaviour:
   gridSizeY: 100
   cellSize: 1
   player: {fileID: 0}
+  idBlocoDeletar: 0
+  idBlocoCriar: 0
+  myCam: {fileID: 0}
+  obj1: {fileID: 0}
+  obj2: {fileID: 0}
 --- !u!64 &2146611005
 MeshCollider:
   m_ObjectHideFlags: 0
