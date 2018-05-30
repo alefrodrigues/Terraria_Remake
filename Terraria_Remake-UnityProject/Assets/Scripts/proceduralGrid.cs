@@ -6,12 +6,12 @@ public class proceduralGrid : MonoBehaviour {
 
 	public List <Vector2> uvList = new List <Vector2>();
 
-	public MeshCollider meshCollider;
+	public PolygonCollider2D meshCollider;
 	public Mesh mesh;
 	public Vector3[] vertices;
 	public int[] triangles;
 	public Vector2[] uvs;
-
+	public Vector2[] col;
 
 	public Vector3 gridOffSet;
 	public int gridSizeX;
@@ -30,7 +30,7 @@ public class proceduralGrid : MonoBehaviour {
 	RaycastHit hit; 
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
-
+		meshCollider = GetComponent<PolygonCollider2D> ();
 	}
 	void Start () {
 
@@ -39,6 +39,7 @@ public class proceduralGrid : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Space)){
 			makeDiscreteGrid();
 			updateMesh();
+			updateCol ();
 		}
 		if(Input.GetKeyDown(KeyCode.X)){
 			deletarBloco (idBlocoDeletar);
@@ -55,11 +56,13 @@ public class proceduralGrid : MonoBehaviour {
 	
 			int posX =  Mathf.FloorToInt(Mathf.Round(posMouse.x - 0.5f));
 			int posY = Mathf.FloorToInt(Mathf.Round(posMouse.y - 0.5f));
-			print (posX+" , "+posY);
 
 			int valorTriangulo = (posY + (posX * 100));
 
 			deletarBloco (valorTriangulo);
+		}
+		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) ){
+			updateCol ();
 		}
 
 		if (Input.GetKey(KeyCode.Mouse1)) {
@@ -69,7 +72,6 @@ public class proceduralGrid : MonoBehaviour {
 
 			int posX =  Mathf.FloorToInt(Mathf.Round(posMouse.x - 0.5f));
 			int posY = Mathf.FloorToInt(Mathf.Round(posMouse.y - 0.5f));
-			print (posX+" , "+posY);
 
 			int valorTriangulo = (posY + (posX * 100));
 
@@ -80,7 +82,9 @@ public class proceduralGrid : MonoBehaviour {
 	void makeDiscreteGrid () {
 		//Set array sizes
 		vertices = new Vector3[gridSizeX * gridSizeY * 4];
+		col = new Vector2[gridSizeX * gridSizeY * 4];
 		triangles = new int[gridSizeX * gridSizeY * 6];
+
 
 		//Set trackers integer 
 		int v = 0;
@@ -108,7 +112,11 @@ public class proceduralGrid : MonoBehaviour {
 				triangles[t+1] = triangles[t+4] = v+ 1;
 				triangles[t+2] = triangles[t+3] = v+ 2;
 				triangles[t+5] = v + 3;
-				setUvBlock(4);
+				if (y < gridSizeY - 1) {
+					setUvBlock (4);
+				} else {
+					setUvBlock (3);
+				}
 
 				//print (vertices[v] + " ," +vertices[v+1] + " ," +vertices[v+2] + " ," +vertices[v+3]);
 
@@ -131,6 +139,7 @@ public class proceduralGrid : MonoBehaviour {
 			}
 		}
 		updateMesh ();
+
 	}
 
 	void criarBloco(int idBloco){
@@ -153,7 +162,12 @@ public class proceduralGrid : MonoBehaviour {
 		mesh.triangles = triangles;
 		mesh.uv = uvList.ToArray();
 		mesh.RecalculateNormals();
-		GetComponent<MeshCollider>().sharedMesh = mesh;
+
+
+	}
+	void updateCol(){
+		GetComponent<MeshCollider> ().sharedMesh = null;
+		GetComponent<MeshCollider> ().sharedMesh = mesh;
 	}
 
 	void setUvBlock (int _idTypeBloco) {
