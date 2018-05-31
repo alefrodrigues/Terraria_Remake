@@ -13,7 +13,7 @@ public class proceduralGrid : MonoBehaviour {
 	public Vector2[] uvs;
 	public Vector2[] col;
 
-	public Vector3 gridOffSet;
+	//public Vector3 gridOffSet;
 	public int gridSizeX;
 	public int gridSizeY;
 	public float cellSize = 1;
@@ -25,9 +25,16 @@ public class proceduralGrid : MonoBehaviour {
 
 	public Camera myCam;
 
-	public GameObject obj1;
-	public GameObject obj2;
-	RaycastHit hit; 
+	bool cimaEsquerda = true;
+	bool cima = true;
+	bool cimaDireita = true;
+	bool meioEsquerda = true;
+	bool meio = true;
+	bool meioDireita = true;
+	bool baixoEsquerda = true;
+	bool baixo = true;
+	bool baixoDireita = true;
+
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
 		meshCollider = GetComponent<PolygonCollider2D> ();
@@ -85,18 +92,17 @@ public class proceduralGrid : MonoBehaviour {
 		col = new Vector2[gridSizeX * gridSizeY * 4];
 		triangles = new int[gridSizeX * gridSizeY * 6];
 
-
 		//Set trackers integer 
 		int v = 0;
 		int t = 0;
 
 		//Set VertexOffSet
-		float VertexOffSet = cellSize * 0.5f;
+		//float VertexOffSet = cellSize * 0.5f;
 
 		//Create vertex grid
 		for(int x = 0; x < gridSizeX; x++){
 			for(int y = 0; y < gridSizeY; y++){
-				Vector3 cellOffSet = new Vector3(x * cellSize,y * cellSize, 0);
+				//Vector3 cellOffSet = new Vector3(x * cellSize,y * cellSize, 0);
 
 				vertices [v] = new Vector3 (x,y,0);
 				vertices [v+1] = new Vector3 (x,y+1,0);
@@ -115,7 +121,7 @@ public class proceduralGrid : MonoBehaviour {
 				if (y < gridSizeY - 1) {
 					setUvBlock (4);
 				} else {
-					setUvBlock (3);
+					setUvBlock (5);
 				}
 
 				//print (vertices[v] + " ," +vertices[v+1] + " ," +vertices[v+2] + " ," +vertices[v+3]);
@@ -129,7 +135,7 @@ public class proceduralGrid : MonoBehaviour {
 
 	void deletarBloco(int idBloco){
 		idBloco = idBloco * 4;
-		for(int i=0;i<=triangles.Length;i++){
+		for(int i=0;i<triangles.Length;i++){
 			if(triangles[i] == idBloco && idBloco <= triangles.Length){
 				triangles [i] = idBloco;
 				triangles [i + 1] = triangles [i + 4] = idBloco;
@@ -175,41 +181,80 @@ public class proceduralGrid : MonoBehaviour {
 		switch (_idTypeBloco)
 		{
 		    case 0:
-		    	//bloco1
+		    	//bloco1 baixo direita
 		        uvList.Add(new Vector2(0f,0f));
 				uvList.Add(new Vector2(0f,0.5f));
 				uvList.Add(new Vector2(0.5f,0f));
 				uvList.Add(new Vector2(0.5f,0.5f));
 		        break;
 		    case 1:
-		        //bloco2
+		        //bloco2 baixo esquerda
 				uvList.Add(new Vector2(0f,0.5f));
 				uvList.Add(new Vector2(0f,1f));
 				uvList.Add(new Vector2(0.5f,0.5f));
 				uvList.Add(new Vector2(0.5f,1f));
 		        break;
 		    case 2:
-		        //bloco3
+		        //bloco3 cima esquerda
 				uvList.Add(new Vector2(0.5f,0f));
 				uvList.Add(new Vector2(0.5f,0.5f));
 				uvList.Add(new Vector2(1f,0f));
 				uvList.Add(new Vector2(1f,0.5f));
 		        break;
 		    case 3:
-		        //bloco4
+		        //bloco4 cima direita
 				uvList.Add(new Vector2(0.5f,0.5f));
 				uvList.Add(new Vector2(0.5f,1f));
 				uvList.Add(new Vector2(1f,0.5f));
 				uvList.Add(new Vector2(1f,1f));
 		        break;
 		     case 4:
-		        //bloco4
+		        //bloco4 meio
 				uvList.Add(new Vector2(0.25f,0.25f));
 				uvList.Add(new Vector2(0.25f,0.75f));
 				uvList.Add(new Vector2(0.75f,0.25f));
 				uvList.Add(new Vector2(0.75f,0.75f));
 		        break;
+	       case 5:
+		        //bloco4 cima
+				uvList.Add(new Vector2(0.25f,0.5f));
+				uvList.Add(new Vector2(0.25f,1f));
+				uvList.Add(new Vector2(0.75f,0.5f));
+				uvList.Add(new Vector2(0.75f,1f));
+	        break;
 		    
+		}
+	}
+
+	//definir qual uv o bloco tera de acordo com a sua coordenada (x,y) , seus vertices e seus triangulos
+	void definirTextureBloco(Mesh _mesh){
+		Vector2[] _uvGrid = _mesh.uv;
+		Vector3[] _verticesGrid = _mesh.vertices;
+		int[] _trianglesGrid = _mesh.triangles;
+
+		for(int i = 0 ;i <= _verticesGrid.Length;i++){
+
+			//identificando extremidades
+			if(vertices[i].x < 1){
+				cimaEsquerda = false;
+				meioEsquerda = false;
+				baixoEsquerda = false;
+			}
+			if(vertices[i].x >= 99){
+				cimaDireita = false;
+				meioDireita = false;
+				baixoDireita = false;
+			}
+			if(vertices[i].y < 1){
+				baixoEsquerda = false;
+				baixo = false;
+				baixoDireita = false;
+			}
+			if(vertices[i].y >= 99){
+				cimaEsquerda = false;
+				cima = false;
+				cimaDireita = false;
+			}
 		}
 	}
 }

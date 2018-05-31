@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123540444847938}
-  - component: {fileID: 114606413109965156}
   - component: {fileID: 23635841816268190}
   - component: {fileID: 33238267952702974}
   - component: {fileID: 114582299681948808}
@@ -99,25 +98,3 @@ MonoBehaviour:
   vertices: []
   uvs: []
   triangulos: 
---- !u!114 &114606413109965156
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1802516829369708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a436cbf7e4dfe488c2eb78592f3242, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  positionMeshData: {x: 0, y: 0, z: 0}
-  posTriangles: 0
-  updateMesh: 1
-  uvX: 0
-  uvY: 0
-  divUv: 0
-  v1: {x: 0, y: 0}
-  v2: {x: 0, y: 1}
-  v3: {x: 1, y: 0}
-  v4: {x: 1, y: 1}
