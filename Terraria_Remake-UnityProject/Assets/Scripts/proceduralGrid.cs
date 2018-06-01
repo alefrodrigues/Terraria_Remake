@@ -43,12 +43,14 @@ public class proceduralGrid : MonoBehaviour {
 
 	}
 	void Update(){
+		//CRIAR MESHGRID
 		if(Input.GetKeyDown(KeyCode.Space)){
 			makeDiscreteGrid();
 			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 			updateCol ();
 		}
 
+		//DEFINIR TEXTURA DO BLOCO
 		if(Input.GetKeyDown(KeyCode.X)){
 			
 			for(int x = 0; x < gridSizeX; x++){
@@ -59,6 +61,35 @@ public class proceduralGrid : MonoBehaviour {
 			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 			print("Atualizou blocos!");
 		}
+
+		//DELETAR EM VOLTA
+		if(Input.GetKeyDown(KeyCode.C)){
+			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
+
+			int posX =  Mathf.FloorToInt(Mathf.Round(p.x - 0.5f));
+			int posY = Mathf.FloorToInt(Mathf.Round(p.y - 0.5f));
+
+			deletarEmVolta (posX,posY);
+			definirTextureBloco(posX,posY);
+			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
+			print("deletou em volta do bloco!");
+		}
+
+		//CRIAR EM VOLTA
+		if(Input.GetKeyDown(KeyCode.V)){
+			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
+
+			int posX =  Mathf.FloorToInt(Mathf.Round(p.x - 0.5f));
+			int posY = Mathf.FloorToInt(Mathf.Round(p.y - 0.5f));
+
+			criarEmVolta (posX,posY);
+
+			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
+			definirTextureBloco(posX,posY);
+			print("deletou em volta do bloco!");
+		}
+
+		//DELETAR BLOCO
 		if (Input.GetKey(KeyCode.Mouse0)) {
 			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
 
@@ -69,10 +100,18 @@ public class proceduralGrid : MonoBehaviour {
 
 			deletarBloco (valorTriangulo);
 		}
+
+		//UPDATE COLISAO
 		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) ){
 			updateCol ();
+			/*for(int x = 0;x<= gridSizeX;x++){
+				for(int y = 0;y<= gridSizeX;y++){
+					definirTextureBloco (x,y);
+				}
+			}*/
 		}
 
+		//CRIAR BLOCO
 		if (Input.GetKey(KeyCode.Mouse1)) {
 			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
 
@@ -165,12 +204,70 @@ public class proceduralGrid : MonoBehaviour {
 		trianglesList.Add(idBloco+1);
 		trianglesList.Add(idBloco+3);
 
-		estadoBloco[idBloco] = 1;
+		estadoBloco.Add(1);
+		estadoBloco.Add(1);
+		estadoBloco.Add(1);
+		estadoBloco.Add(1);
+		estadoBloco.Add(1);
+		estadoBloco.Add(1);
+		estadoBloco [idBloco] = 1;
+		estadoBloco[idBloco+1] = 1;
+		estadoBloco[idBloco+2] = 1;
+		estadoBloco[idBloco+3] = 1;
+		estadoBloco[idBloco+4] = 1;
+		estadoBloco[idBloco+5] = 1;
 
 		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 		print("Criou o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
+	void deletarEmVolta(int posX ,int posY){
+		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
+		int cimaEsquerda = (posY + (posX * gridSizeY) - (gridSizeY -1));
+		int cima = (posY + (posX * gridSizeY) + 1);
+		int cimaDireita = (posY + (posX * gridSizeY) + (gridSizeY +1));
+		int meioEsquerda = (posY + (posX * gridSizeY) - gridSizeY);
+		int meio = (posY + (posX * gridSizeY));
+		int meioDireita = (posY + (posX * gridSizeY) + gridSizeY);
+		int baixoEsquerda = (posY + (posX * gridSizeY) - (gridSizeY + 10));
+		int baixo = (posY + (posX * gridSizeY) - 1);
+		int baixoDireita = (posY + (posX * gridSizeY) + (gridSizeY-1));
 
+		deletarBloco (cimaEsquerda);
+		deletarBloco (cima);
+		deletarBloco (cimaDireita);
+
+		deletarBloco (meioEsquerda);
+		deletarBloco (meioDireita);
+
+		deletarBloco (baixoEsquerda);
+		deletarBloco (baixo);
+		deletarBloco (baixoDireita);
+	}
+
+	void criarEmVolta(int posX ,int posY){
+		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
+		int cimaEsquerda = (posY + (posX * gridSizeY) - 99);
+		int cima = (posY + (posX * gridSizeY) + 1);
+		int cimaDireita = (posY + (posX * gridSizeY) + 101);
+		int meioEsquerda = (posY + (posX * gridSizeY) - gridSizeY);
+		int meio = (posY + (posX * gridSizeY));
+		int meioDireita = (posY + (posX * gridSizeY) + gridSizeY);
+		int baixoEsquerda = (posY + (posX * gridSizeY) - 101);
+		int baixo = (posY + (posX * gridSizeY) - 1);
+		int baixoDireita = (posY + (posX * gridSizeY) + 99);
+
+		criarBloco (cimaEsquerda);
+		criarBloco (cima);
+		criarBloco (cimaDireita);
+
+		criarBloco (meioEsquerda);
+		criarBloco (meioDireita);
+
+		criarBloco (baixoEsquerda);
+		criarBloco (baixo);
+		criarBloco (baixoDireita);
+	}
+		
 	void updateMesh(Vector3[] _vertices,int[] _triangles,Vector2[] _uv){
 		mesh.Clear();
 		mesh.vertices = _vertices;
@@ -282,110 +379,147 @@ public class proceduralGrid : MonoBehaviour {
 
 		if(cimaEsquerda < 0){
 			cimaEsquerda = 0;
+			estadoBloco[cimaEsquerda] = 0;
 		}
 		if(cima < 0){
 			cima = 0;
+			estadoBloco[cima] = 0;
 		}
 		if(cimaDireita < 0){
 			cimaDireita = 0;
+			estadoBloco[cimaDireita] = 0;
 		}
 		if(meioEsquerda < 0){
 			meioEsquerda = 0;
+			estadoBloco[meioEsquerda] = 0;
 		}
 		if(meioDireita < 0){
 			meioDireita = 0;
+			estadoBloco[meioDireita] = 0;
 		}
 		if(baixoEsquerda < 0){
 			baixoEsquerda = 0;
+			estadoBloco[baixoEsquerda] = 0;
 		}
 		if(baixo < 0){
 			baixo = 0;
+			estadoBloco[baixo] = 0;
 		}
 		if(baixoDireita < 0){
 			baixoDireita = 0;
+			estadoBloco[baixoDireita] = 0;
 		}
 		//procurando e analisando os blocos em volta do bloco anasalisado
-			if(estadoBloco[cimaEsquerda] == 0 )
-			{
-				idTypeBloco += 1;
-			}
+		if(estadoBloco[cimaEsquerda] == 0 )
+		{
+			idTypeBloco += 1;
+		}
 
-			if(estadoBloco[cima] == 0)
-			{
-				idTypeBloco += 2;
-			}
+		if(estadoBloco[cima] == 0)
+		{
+			idTypeBloco += 2;
+		}
 
-			if(estadoBloco[cimaDireita] == 0)
-			{
-				idTypeBloco += 3;
-			}
+		if(estadoBloco[cimaDireita] == 0)
+		{
+			idTypeBloco += 3;
+		}
 
-			if(estadoBloco[meioEsquerda] == 0)
-			{
-				idTypeBloco += 4;
-			}
+		if(estadoBloco[meioEsquerda] == 0)
+		{
+			idTypeBloco += 4;
+		}
+		
+		if(estadoBloco[meio] == 0)
+		{
+			idTypeBloco += 5;
+		}
 
-			if(estadoBloco[meioDireita] == 0)
-			{
-				idTypeBloco += 5;
-			}
+		if(estadoBloco[meioDireita] == 0)
+		{
+			idTypeBloco += 6;
+		}
 
-			if(estadoBloco[baixoEsquerda] == 0)
-			{
-				idTypeBloco += 6;
-			}
+		if(estadoBloco[baixoEsquerda] == 0)
+		{
+			idTypeBloco += 7;
+		}
 
-			if(estadoBloco[baixo] == 0)
-			{
-				idTypeBloco += 7;
-			}
+		if(estadoBloco[baixo] == 0)
+		{
+			idTypeBloco += 8;
+		}
 
-			if(estadoBloco[baixoDireita] == 0)
-			{
-				idTypeBloco += 8;
-			}
-			if(posX < 1){
-				_cimaDireita = false;
-				_meioEsquerda = false;
-				_baixoEsquerda = false;
-			}
-			if(posY < 1){
-				_baixoEsquerda = false;
-				_baixo = false;
-				_baixoDireita = false;
-			}
-			if(posY >=99){
-				_cimaEsquerda = false;
-				_cima = false;
-				_cimaDireita = false;
-			}
+		if(estadoBloco[baixoDireita] == 0)
+		{
+			idTypeBloco += 9;
+		}
 
-			//defindindo posiçao textura do bloco
-			/*
-			valores por direcao
-			1 = cimaEsquerda
-			2 = cima
-			3 = cimaDireita
-			4 = meioEsquerda
-			5 =	meio
-			6 = meioDireita
-			7 = baixoEsquerda
-			8 = baixo
-			9 = baixoDireita
-			10 = blocoInteiro
-			*/
+		//defindindo posiçao textura do bloco
+		/*
+		valores por direcao
+		1 = cimaEsquerda
+		2 = cima
+		3 = cimaDireita
+		4 = meioEsquerda
+		5 =	meio
+		6 = meioDireita
+		7 = baixoEsquerda
+		8 = baixo
+		9 = baixoDireita
+		10 = blocoInteiro
+		*/
 
-			//se todas as direçoes forem falso
-			//nada
-			if(idTypeBloco == 0){
-				setUvBlock(5,meio);
-			}
-			//tudo
-			else if(idTypeBloco == 36){
-				setUvBlock(10,meio);
-			}
+		//se todas as direçoes forem falso
 
-			idTypeBloco = 0;
+		//nada
+		if (idTypeBloco == 0) {
+			setUvBlock (5, meio);
+		}
+		//meio
+		if (idTypeBloco == 5) {
+			setUvBlock (5, meio);
+		}
+		//tudo
+		if (idTypeBloco == 40) {
+			setUvBlock (40, meio);
+		} 
+		//cima esquerda
+		if (idTypeBloco == 1) {
+			setUvBlock (1, meio);
+		} 
+		//cima
+		if (idTypeBloco == 2) {
+			setUvBlock (2, meio);
+		} 
+		//cima direita
+		if (idTypeBloco == 3) {
+			setUvBlock (3, meio);
+		} 
+		//meio esquerda
+		if (idTypeBloco == 4) {
+
+			setUvBlock (4, meio);
+		} 
+		//meio direita
+		if (idTypeBloco == 6) {
+
+			setUvBlock (6, meio);
+		}
+		//baixo
+		if (idTypeBloco == 8) {
+			setUvBlock (8, meio);
+		}
+		if(idTypeBloco == 12 || idTypeBloco == 20){
+			setUvBlock (4, meio);
+		}
+		if(idTypeBloco == 25){
+			setUvBlock (7, meio);
+		}
+		if(idTypeBloco == 6){
+			setUvBlock (2, meio);
+		}
+
 		
 	}
 }
