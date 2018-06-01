@@ -56,6 +56,7 @@ public class proceduralGrid : MonoBehaviour {
 					definirTextureBloco(x,y);
 				}
 			}
+			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 			print("Atualizou blocos!");
 		}
 		if (Input.GetKey(KeyCode.Mouse0)) {
@@ -119,6 +120,7 @@ public class proceduralGrid : MonoBehaviour {
 				uvList.Add(new Vector2(0.75f,0.25f));
 				uvList.Add(new Vector2(0.75f,0.75f));
 
+
 				//estado do bloco
 				estadoBloco.Add(1);
 				estadoBloco.Add(1);
@@ -144,9 +146,14 @@ public class proceduralGrid : MonoBehaviour {
 		trianglesList.Remove(idBloco+3);
 
 		estadoBloco[idBloco] = 0;
+		estadoBloco[idBloco+1] = 0;
+		estadoBloco[idBloco+2] = 0;
+		estadoBloco[idBloco+3] = 0;
+		estadoBloco[idBloco+4] = 0;
+		estadoBloco[idBloco+5] = 0;
 
 		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
-		print("Removeu o bloco: " + idBloco);
+		print("Removeu o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
 
 	void criarBloco(int idBloco){
@@ -161,6 +168,7 @@ public class proceduralGrid : MonoBehaviour {
 		estadoBloco[idBloco] = 1;
 
 		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
+		print("Criou o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
 
 	void updateMesh(Vector3[] _vertices,int[] _triangles,Vector2[] _uv){
@@ -169,87 +177,88 @@ public class proceduralGrid : MonoBehaviour {
 		mesh.triangles = _triangles;
 		mesh.uv = _uv;
 		mesh.RecalculateNormals();
-
-
 	}
 	void updateCol(){
 		GetComponent<MeshCollider> ().sharedMesh = null;
 		GetComponent<MeshCollider> ().sharedMesh = mesh;
-	}
-	void updateUV(int idUV,Vector2 newUvPos0,Vector2 newUvPos1,Vector2 newUvPos2,Vector2 newUvPos3){
-		uvList[idUV] = newUvPos0;
-		uvList[idUV+1] = newUvPos1;
-		uvList[idUV+2] = newUvPos2;
-		uvList[idUV+3] = newUvPos3;
-		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 	}
 	void setUvBlock (int _idTypeBloco, int _idUv) {
 		// 0 = baixoEsquerda, 1 = cimaEsquerda, 2 = baixoDireita, 3 = cimaDireita, 4 = meio, 5 = cima, 6 = baixo
 		// 7 = meioEsquerda, 8 = meioDireita
 		switch (_idTypeBloco)
 		{
-		    case 0:
-		    	//baixo esquerda
-		        uvList[_idUv] = new Vector2(0f,0f);
-				uvList[_idUv] = new Vector2(0f,0.5f);
-				uvList[_idUv] = new Vector2(0.5f,0f);
-				uvList[_idUv] = new Vector2(0.5f,0.5f);
-		        break;
+		    
+		    	
 		    case 1:
 		        //cima esquerda
-				uvList.Add(new Vector2(0f,0.5f));
-				uvList.Add(new Vector2(0f,1f));
-				uvList.Add(new Vector2(0.5f,0.5f));
-				uvList.Add(new Vector2(0.5f,1f));
+				uvList [_idUv] = new Vector2(0f,0.5f);
+				uvList [_idUv+1] = new Vector2(0f,1f);
+				uvList [_idUv+2] = new Vector2(0.5f,0.5f);
+				uvList [_idUv+3] = new Vector2(0.5f,1f);
 		        break;
 		    case 2:
-		        //baixo direita
-				uvList [_idUv] = new Vector2(0.5f,0f);
-				uvList [_idUv] = new Vector2(0.5f,0.5f);
-				uvList [_idUv] = new Vector2(1f,0f);
-				uvList [_idUv] = new Vector2(1f,0.5f);
-		        break;
+		        //cima
+				uvList [_idUv] = new Vector2(0.25f,0.5f);
+				uvList [_idUv+1] = new Vector2(0.25f,1f);
+				uvList [_idUv+2] = new Vector2(0.75f,0.5f);
+				uvList [_idUv+3] = new Vector2(0.75f,1f);
+	        	break;
 		    case 3:
 		        //cima direita
 				uvList [_idUv] = new Vector2(0.5f,0.5f);
-				uvList [_idUv] = new Vector2(0.5f,1f);
-				uvList [_idUv] = new Vector2(1f,0.5f);
-				uvList [_idUv] = new Vector2(1f,1f);
+				uvList [_idUv+1] = new Vector2(0.5f,1f);
+				uvList [_idUv+2] = new Vector2(1f,0.5f);
+				uvList [_idUv+3] = new Vector2(1f,1f);
 		        break;
-		    case 4:
-		        //meio
-				uvList [_idUv] = new Vector2(0.25f,0.25f);
-				uvList [_idUv] = new Vector2(0.25f,0.75f);
-				uvList [_idUv] = new Vector2(0.75f,0.25f);
-				uvList [_idUv] = new Vector2(0.75f,0.75f);
-		        break;
-	        case 5:
-		        //cima
-				uvList [_idUv] = new Vector2(0.25f,0.5f);
-				uvList [_idUv] = new Vector2(0.25f,1f);
-				uvList [_idUv] = new Vector2(0.75f,0.5f);
-				uvList [_idUv] = new Vector2(0.75f,1f);
-	        	break;
-	        case 6:
-		        //baixo
-				uvList [_idUv] = new Vector2(0.25f,0f);
-				uvList [_idUv] = new Vector2(0.25f,.5f);
-				uvList [_idUv] = new Vector2(0.75f,0f);
-				uvList [_idUv] = new Vector2(0.75f,0.75f);
-	        	break;
-	        case 7:
+	        
+	        case 4:
 		        //meio esquerda
 				uvList [_idUv] = new Vector2(0f,0.25f);
-				uvList [_idUv] = new Vector2(0f,0.75f);
-				uvList [_idUv] = new Vector2(0.5f,0.25f);
-				uvList [_idUv] = new Vector2(0.75f,0.75f);
+				uvList [_idUv+1] = new Vector2(0f,0.75f);
+				uvList [_idUv+2] = new Vector2(0.5f,0.25f);
+				uvList [_idUv+3] = new Vector2(0.5f,0.75f);
 	        	break;
-	        case 8:
+	        case 5:
+		        //meio
+				uvList [_idUv] = new Vector2(0.25f,0.25f);
+				uvList [_idUv+1] = new Vector2(0.25f,0.75f);
+				uvList [_idUv+2] = new Vector2(0.75f,0.25f);
+				uvList [_idUv+3] = new Vector2(0.75f,0.75f);
+		        break;
+	        case 6:
 		        //meio direita
 				uvList [_idUv] = new Vector2(0.5f,0.25f);
-				uvList [_idUv] = new Vector2(0.5f,0.75f);
-				uvList [_idUv] = new Vector2(1f,0.25f);
-				uvList [_idUv] = new Vector2(1f,0.75f);
+				uvList [_idUv+1] = new Vector2(0.5f,0.75f);
+				uvList [_idUv+2] = new Vector2(1f,0.25f);
+				uvList [_idUv+3] = new Vector2(1f,0.75f);
+	        	break;
+			case 7:
+	       		//baixo esquerda
+		        uvList[_idUv] = new Vector2(0f,0f);
+				uvList[_idUv+1] = new Vector2(0f,0.5f);
+				uvList[_idUv+2] = new Vector2(0.5f,0f);
+				uvList[_idUv+3] = new Vector2(0.5f,0.5f);
+		        break;
+		    case 8:
+		        //baixo
+				uvList [_idUv] = new Vector2(0.25f,0f);
+				uvList [_idUv+1] = new Vector2(0.25f,.5f);
+				uvList [_idUv+2] = new Vector2(0.75f,0f);
+				uvList [_idUv+3] = new Vector2(0.75f,0.75f);
+	        	break;
+	        case 9:
+		        //baixo direita
+				uvList [_idUv] = new Vector2(0.5f,0f);
+				uvList [_idUv+1] = new Vector2(0.5f,0.5f);
+				uvList [_idUv+2] = new Vector2(1f,0f);
+				uvList [_idUv+3] = new Vector2(1f,0.5f);
+		        break;
+		    case 10:
+		        //bloco inteiro
+				uvList [_idUv] = new Vector2(0f,0f);
+				uvList [_idUv+1] = new Vector2(0f,1f);
+				uvList [_idUv+2] = new Vector2(1f,0f);
+				uvList [_idUv+3] = new Vector2(1f,1f);
 	        	break;
 		    
 		}
@@ -257,6 +266,9 @@ public class proceduralGrid : MonoBehaviour {
 
 	//definir qual uv o bloco tera de acordo com a sua coordenada (x,y) , seus vertices e seus triangulos
 	void definirTextureBloco(int posX, int posY){
+
+		int idTypeBloco = 0;
+
 		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
 		int cimaEsquerda = (posY + (posX * gridSizeY) - 99) * 4;
 		int cima = (posY + (posX * gridSizeY) + 1) * 4;
@@ -268,100 +280,112 @@ public class proceduralGrid : MonoBehaviour {
 		int baixo = (posY + (posX * gridSizeY) - 1) * 4;
 		int baixoDireita = (posY + (posX * gridSizeY) + 99) * 4;
 
+		if(cimaEsquerda < 0){
+			cimaEsquerda = 0;
+		}
+		if(cima < 0){
+			cima = 0;
+		}
+		if(cimaDireita < 0){
+			cimaDireita = 0;
+		}
+		if(meioEsquerda < 0){
+			meioEsquerda = 0;
+		}
+		if(meioDireita < 0){
+			meioDireita = 0;
+		}
+		if(baixoEsquerda < 0){
+			baixoEsquerda = 0;
+		}
+		if(baixo < 0){
+			baixo = 0;
+		}
+		if(baixoDireita < 0){
+			baixoDireita = 0;
+		}
 		//procurando e analisando os blocos em volta do bloco anasalisado
-		for(int i = 0 ;i < trianglesList.Count;i++){
-			if(estadoBloco[cimaEsquerda] == 0)
+			if(estadoBloco[cimaEsquerda] == 0 )
 			{
-				_cimaEsquerda = false;
-				print("meio");
+				idTypeBloco += 1;
 			}
 
-			else if(estadoBloco[cima] == 0)
+			if(estadoBloco[cima] == 0)
 			{
-				_cima = false;
-				print("meio");
+				idTypeBloco += 2;
 			}
 
-			else if(trianglesList[i] == cimaDireita && trianglesList[i + 1] == cimaDireita && trianglesList[i + 2] == cimaDireita
-				&& trianglesList [i + 3] == cimaDireita && trianglesList [i + 4] == cimaDireita && trianglesList[i + 5] == cimaDireita)
+			if(estadoBloco[cimaDireita] == 0)
 			{
+				idTypeBloco += 3;
+			}
+
+			if(estadoBloco[meioEsquerda] == 0)
+			{
+				idTypeBloco += 4;
+			}
+
+			if(estadoBloco[meioDireita] == 0)
+			{
+				idTypeBloco += 5;
+			}
+
+			if(estadoBloco[baixoEsquerda] == 0)
+			{
+				idTypeBloco += 6;
+			}
+
+			if(estadoBloco[baixo] == 0)
+			{
+				idTypeBloco += 7;
+			}
+
+			if(estadoBloco[baixoDireita] == 0)
+			{
+				idTypeBloco += 8;
+			}
+			if(posX < 1){
 				_cimaDireita = false;
-				print("meio");
-			}
-
-			else if(trianglesList[i] == meioEsquerda && trianglesList[i + 1] == meioEsquerda && trianglesList[i + 2] == meioEsquerda
-				&& trianglesList [i + 3] == meioEsquerda && trianglesList [i + 4] == meioEsquerda && trianglesList[i + 5] == meioEsquerda)
-			{
 				_meioEsquerda = false;
-				print("meio");
-			}
-
-			else if(trianglesList[i] == meioDireita && trianglesList[i + 1] == meioDireita && trianglesList[i + 2] == meioDireita
-				&& trianglesList [i + 3] == meioDireita && trianglesList [i + 4] == meioDireita && trianglesList[i + 5] == meioDireita)
-			{
-				_meioDireita = false;
-				print("meio");
-			}
-
-			else if(trianglesList[i] == baixoEsquerda && trianglesList[i + 1] == baixoEsquerda && trianglesList[i + 2] == baixoEsquerda
-				&& trianglesList [i + 3] == baixoEsquerda && trianglesList [i + 4] == baixoEsquerda && trianglesList[i + 5] == baixoEsquerda)
-			{
 				_baixoEsquerda = false;
-				print("meio");
 			}
-
-			else if(trianglesList[i] == baixo && trianglesList[i + 1] == baixo && trianglesList[i + 2] == baixo
-				&& trianglesList [i + 3] == baixo && trianglesList [i + 4] == baixo && trianglesList[i + 5] == baixo)
-			{
+			if(posY < 1){
+				_baixoEsquerda = false;
 				_baixo = false;
-				print("meio");
-			}
-
-			else if(trianglesList[i] == baixoDireita && trianglesList[i + 1] == baixoDireita && trianglesList[i + 2] == baixoDireita
-				&& trianglesList [i + 3] == baixoDireita && trianglesList [i + 4] == baixoDireita && trianglesList[i + 5] == baixoDireita)
-			{
 				_baixoDireita = false;
-				print("meio");
-			}else{
-				_cimaEsquerda = true;
-				_cima = true;
-				_cimaDireita = true;
-				_meioEsquerda = true;
-				_meio = true;
-				_meioDireita = true;
-				_baixoEsquerda = true;
-				_baixo = true;
-				_baixoDireita = true;
-				break;
+			}
+			if(posY >=99){
+				_cimaEsquerda = false;
+				_cima = false;
+				_cimaDireita = false;
 			}
 
 			//defindindo posiçao textura do bloco
-			if( _cimaEsquerda == true &&
-				_cima == true &&
-				_cimaDireita == true &&
-				_meioEsquerda == true &&
-				_meio == true &&
-				_meioDireita == true &&
-				_baixoEsquerda == true &&
-				_baixo == true &&
-				_baixoDireita == true)
-			{
-				setUvBlock(1,meio);
-				print("meio");
+			/*
+			valores por direcao
+			1 = cimaEsquerda
+			2 = cima
+			3 = cimaDireita
+			4 = meioEsquerda
+			5 =	meio
+			6 = meioDireita
+			7 = baixoEsquerda
+			8 = baixo
+			9 = baixoDireita
+			10 = blocoInteiro
+			*/
+
+			//se todas as direçoes forem falso
+			//nada
+			if(idTypeBloco == 0){
+				setUvBlock(5,meio);
 			}
-			else if( _cimaEsquerda == true ||
-				_cima == true ||
-				_cimaDireita == true ||
-				_meioEsquerda == true ||
-				_meio == true ||
-				_meioDireita == true ||
-				_baixoEsquerda == true ||
-				_baixo == true ||
-				_baixoDireita == true)
-			{
-				setUvBlock (7,meio);
-				print("cimaEsquerda");
+			//tudo
+			else if(idTypeBloco == 36){
+				setUvBlock(10,meio);
 			}
-		}
+
+			idTypeBloco = 0;
+		
 	}
 }
