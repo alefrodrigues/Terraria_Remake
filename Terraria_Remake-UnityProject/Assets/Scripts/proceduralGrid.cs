@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class proceduralGrid : MonoBehaviour {
+	List <int> blocosEmVolta = new List <int> ();
 
 	//arrays para montar a MeshGrid
 	public List <Vector3> verticesList = new List <Vector3>();
@@ -24,16 +25,7 @@ public class proceduralGrid : MonoBehaviour {
 	//mainCamera
 	public Camera myCam;
 
-	//propriedades para analisar a textura de cada bloco
-	public bool _cimaEsquerda = true;
-	public bool _cima = true;
-	public bool _cimaDireita = true;
-	public bool _meioEsquerda = true;
-	public bool _meio = true;
-	public bool _meioDireita = true;
-	public bool _baixoEsquerda = true;
-	public bool _baixo = true;
-	public bool _baixoDireita = true;
+	
 
 	void Awake(){
 		mesh = GetComponent<MeshFilter>().mesh;
@@ -203,13 +195,6 @@ public class proceduralGrid : MonoBehaviour {
 		trianglesList.Add(idBloco+2);
 		trianglesList.Add(idBloco+1);
 		trianglesList.Add(idBloco+3);
-
-		estadoBloco.Add(1);
-		estadoBloco.Add(1);
-		estadoBloco.Add(1);
-		estadoBloco.Add(1);
-		estadoBloco.Add(1);
-		estadoBloco.Add(1);
 		estadoBloco [idBloco] = 1;
 		estadoBloco[idBloco+1] = 1;
 		estadoBloco[idBloco+2] = 1;
@@ -363,20 +348,19 @@ public class proceduralGrid : MonoBehaviour {
 
 	//definir qual uv o bloco tera de acordo com a sua coordenada (x,y) , seus vertices e seus triangulos
 	void definirTextureBloco(int posX, int posY){
-
-		int idTypeBloco = 0;
-
+	
 		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
 		int cimaEsquerda = (posY + (posX * gridSizeY) - 99) * 4;
 		int cima = (posY + (posX * gridSizeY) + 1) * 4;
 		int cimaDireita = (posY + (posX * gridSizeY) + 101) * 4;
 		int meioEsquerda = (posY + (posX * gridSizeY) - gridSizeY) * 4;
-		int meio = (posY + (posX * gridSizeY)) * 4;
+		int meio = (posY + (posX * 100)) * 4;
 		int meioDireita = (posY + (posX * gridSizeY) + gridSizeY) * 4;
 		int baixoEsquerda = (posY + (posX * gridSizeY) - 101) * 4;
 		int baixo = (posY + (posX * gridSizeY) - 1) * 4;
 		int baixoDireita = (posY + (posX * gridSizeY) + 99) * 4;
 
+		
 		if(cimaEsquerda < 0){
 			cimaEsquerda = 0;
 			estadoBloco[cimaEsquerda] = 0;
@@ -409,51 +393,6 @@ public class proceduralGrid : MonoBehaviour {
 			baixoDireita = 0;
 			estadoBloco[baixoDireita] = 0;
 		}
-		//procurando e analisando os blocos em volta do bloco anasalisado
-		if(estadoBloco[cimaEsquerda] == 0 )
-		{
-			idTypeBloco += 1;
-		}
-
-		if(estadoBloco[cima] == 0)
-		{
-			idTypeBloco += 2;
-		}
-
-		if(estadoBloco[cimaDireita] == 0)
-		{
-			idTypeBloco += 3;
-		}
-
-		if(estadoBloco[meioEsquerda] == 0)
-		{
-			idTypeBloco += 4;
-		}
-		
-		if(estadoBloco[meio] == 0)
-		{
-			idTypeBloco += 5;
-		}
-
-		if(estadoBloco[meioDireita] == 0)
-		{
-			idTypeBloco += 6;
-		}
-
-		if(estadoBloco[baixoEsquerda] == 0)
-		{
-			idTypeBloco += 7;
-		}
-
-		if(estadoBloco[baixo] == 0)
-		{
-			idTypeBloco += 8;
-		}
-
-		if(estadoBloco[baixoDireita] == 0)
-		{
-			idTypeBloco += 9;
-		}
 
 		//defindindo posiçao textura do bloco
 		/*
@@ -469,57 +408,399 @@ public class proceduralGrid : MonoBehaviour {
 		9 = baixoDireita
 		10 = blocoInteiro
 		*/
-
-		//se todas as direçoes forem falso
+		blocosEmVolta.Add(estadoBloco[cimaEsquerda]);
+		blocosEmVolta.Add(estadoBloco[cima]);
+		blocosEmVolta.Add(estadoBloco[cimaDireita]);
+		blocosEmVolta.Add(estadoBloco[meioEsquerda]);
+		blocosEmVolta.Add(estadoBloco[meio]);
+		blocosEmVolta.Add(estadoBloco[meioDireita]);
+		blocosEmVolta.Add(estadoBloco[baixoEsquerda]);
+		blocosEmVolta.Add(estadoBloco[baixo]);
+		blocosEmVolta.Add(estadoBloco[baixoDireita]);
+		/*print(  blocosEmVolta[0] +  ","+blocosEmVolta[1] +  ","+blocosEmVolta[2] +  ","+
+				blocosEmVolta[3] +  ","+blocosEmVolta[4] +  ","+blocosEmVolta[5] +  ","+
+				blocosEmVolta[6] +  ","+blocosEmVolta[7] +  ","+blocosEmVolta[8]);*/
 
 		//nada
-		if (idTypeBloco == 0) {
-			setUvBlock (5, meio);
-		}
-		//meio
-		if (idTypeBloco == 5) {
-			setUvBlock (5, meio);
-		}
-		//tudo
-		if (idTypeBloco == 40) {
-			setUvBlock (40, meio);
-		} 
+		int[] todos = new int[9]{	1,1,1,
+									1,1,1,
+									1,1,1	};
+
+		int[] nenhum = new int[9]{	0,0,0,
+									0,0,0,
+									0,0,0	};
+
 		//cima esquerda
-		if (idTypeBloco == 1) {
-			setUvBlock (1, meio);
-		} 
-		//cima
-		if (idTypeBloco == 2) {
-			setUvBlock (2, meio);
-		} 
-		//cima direita
-		if (idTypeBloco == 3) {
-			setUvBlock (3, meio);
-		} 
-		//meio esquerda
-		if (idTypeBloco == 4) {
+		int[] ce = new int[9]{	0,0,1,
+								0,1,1,
+								1,1,1	};
 
-			setUvBlock (4, meio);
-		} 
-		//meio direita
-		if (idTypeBloco == 6) {
+		int[] ce1 = new int[9]{	1,0,1,
+								0,1,1,
+								1,1,1	};
 
-			setUvBlock (6, meio);
-		}
+		int[] ce2 = new int[9]{	1,0,0,
+								0,1,1,
+								1,1,1	};
+
+		int[] ce3 = new int[9]{	1,0,0,
+								0,1,1,
+								0,1,1	};
+
+		int[] ce4 = new int[9]{	0,0,0,
+								0,1,1,
+								1,1,1	};
+
+		int[] ce5 = new int[9]{	0,0,0,
+								0,1,1,
+								0,1,1	};
+
+		int[] ce6 = new int[9]{	0,0,1,
+								0,1,1,
+								0,1,1	};
+
+		int[] ce7 = new int[9]{	1,0,1,
+								0,1,1,
+								0,1,1	};
+
+		//cima esquerda
+		int[] cd = new int[9]{	1,0,0,
+								1,1,0,
+								1,1,1	};
+
+		int[] cd1 = new int[9]{	1,0,1,
+								1,1,0,
+								1,1,1	};
+
+		int[] cd2 = new int[9]{	0,0,1,
+								1,1,0,
+								1,1,1	};
+
+		int[] cd3 = new int[9]{	0,0,1,
+								1,1,0,
+								1,1,0	};
+
+		int[] cd4 = new int[9]{	0,0,0,
+								1,1,0,
+								1,1,1	};
+
+		int[] cd5 = new int[9]{	0,0,0,
+								1,1,0,
+								1,1,0	};
+
+		int[] cd6 = new int[9]{	1,0,0,
+								1,1,0,
+								1,1,0	};
+
+		int[] cd7 = new int[9]{	1,0,1,
+								1,1,0,
+								1,1,0	};
+
+		//baixo direita
+		int[] bd = new int[9]{	1,1,1,
+								1,1,0,
+								1,0,0	};
+
+		int[] bd1 = new int[9]{	1,1,0,
+								1,1,0,
+								0,0,0	};
+								
+		int[] bd2 = new int[9]{	1,1,1,
+								1,1,0,
+								0,0,0	};
+								
+		int[] bd3 = new int[9]{	1,1,0,
+								1,1,0,
+								1,0,0	};
+
+		int[] bd4 = new int[9]{	1,1,1,
+								1,1,0,
+								1,0,1	};
+
+		int[] bd5 = new int[9]{	1,1,0,
+								1,1,0,
+								0,0,1	};
+								
+		int[] bd6 = new int[9]{	1,1,1,
+								1,1,0,
+								0,0,1	};
+								
+		int[] bd7 = new int[9]{	1,1,0,
+								1,1,0,
+								1,0,1	};
+
+		//baixo esquerda
+		int[] be = new int[9]{	1,1,1,
+								0,1,1,
+								0,0,1	};
+
+		int[] be1 = new int[9]{	0,1,1,
+								0,1,1,
+								0,0,0	};
+								
+		int[] be2 = new int[9]{	1,1,1,
+								0,1,1,
+								0,0,0	};
+								
+		int[] be3 = new int[9]{	0,1,1,
+								0,1,1,
+								0,0,1	};
+
+		int[] be4 = new int[9]{	1,1,1,
+								0,1,1,
+								1,0,1	};
+
+		int[] be5 = new int[9]{	0,1,1,
+								0,1,1,
+								1,0,0	};
+								
+		int[] be6 = new int[9]{	1,1,1,
+								0,1,1,
+								1,0,0	};
+								
+		int[] be7 = new int[9]{	0,1,1,
+								0,1,1,
+								1,0,1	};
+
 		//baixo
-		if (idTypeBloco == 8) {
-			setUvBlock (8, meio);
+		int[] b = new int[9]{	1,0,1,
+								1,1,1,
+								1,1,1	};
+
+		int[] b1 = new int[9]{	0,0,1,
+								1,1,1,
+								1,1,1	};
+
+		int[] b2 = new int[9]{	1,0,0,
+								1,1,1,
+								1,1,1	};
+
+		int[] b3 = new int[9]{	0,0,0,
+								1,1,1,
+								1,1,1	};
+
+		//cima
+		int[] c = new int[9]{	1,1,1,
+								1,1,1,
+								1,0,1	};
+
+		int[] c1 = new int[9]{	1,1,1,
+								1,1,1,
+								0,0,1	};
+
+		int[] c2 = new int[9]{	1,1,1,
+								1,1,1,
+								1,0,0	};
+
+		int[] c3 = new int[9]{	1,1,1,
+								1,1,1,
+								0,0,0	};
+
+		//meio esquerda
+		int[] me = new int[9]{	0,1,1,
+								0,1,1,
+								0,1,1	};
+
+		int[] me1 = new int[9]{	1,1,1,
+								0,1,1,
+								1,1,1	};
+
+		int[] me2 = new int[9]{	0,1,1,
+								0,1,1,
+								1,1,1	};
+
+		//meio direita
+		int[] md = new int[9]{	1,1,0,
+								1,1,0,
+								1,1,0	};
+
+		int[] md1 = new int[9]{	1,1,1,
+								1,1,0,
+								1,1,1	};
+
+		int[] md2 = new int[9]{	1,1,0,
+								1,1,0,
+								1,1,1	};
+
+		if(compararListas(blocosEmVolta.ToArray(),todos)){
+			setUvBlock(5,meio);
 		}
-		if(idTypeBloco == 12 || idTypeBloco == 20){
-			setUvBlock (4, meio);
-		}
-		if(idTypeBloco == 25){
-			setUvBlock (7, meio);
-		}
-		if(idTypeBloco == 6){
-			setUvBlock (2, meio);
+		if(compararListas(blocosEmVolta.ToArray(),nenhum)){
+			setUvBlock(10,meio);
 		}
 
-		
+		//cima esquerda
+		if(compararListas(blocosEmVolta.ToArray(),ce)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce1)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce2)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce3)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce4)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce5)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce6)){
+			setUvBlock(1,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),ce7)){
+			setUvBlock(1,meio);
+		}
+
+		//cima direita
+		if(compararListas(blocosEmVolta.ToArray(),cd)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd1)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd2)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd3)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd4)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd5)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd6)){
+			setUvBlock(3,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),cd7)){
+			setUvBlock(3,meio);
+		}
+
+		//baixo direita
+		if(compararListas(blocosEmVolta.ToArray(),bd)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd1)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd2)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd3)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd4)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd5)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd6)){
+			setUvBlock(9,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),bd7)){
+			setUvBlock(9,meio);
+		}
+
+		//baixo esquerda
+		if(compararListas(blocosEmVolta.ToArray(),be)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be1)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be2)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be3)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be4)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be5)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be6)){
+			setUvBlock(7,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),be7)){
+			setUvBlock(7,meio);
+		}
+
+		//baixo
+		if(compararListas(blocosEmVolta.ToArray(),b)){
+			setUvBlock(2,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),b1)){
+			setUvBlock(2,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),b2)){
+			setUvBlock(2,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),b3)){
+			setUvBlock(2,meio);
+		}
+
+		//cima
+		if(compararListas(blocosEmVolta.ToArray(),c)){
+			setUvBlock(8,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),c1)){
+			setUvBlock(8,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),c2)){
+			setUvBlock(8,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),c3)){
+			setUvBlock(8,meio);
+		}
+
+		//meio esquerda
+		if(compararListas(blocosEmVolta.ToArray(),me)){
+			setUvBlock(4,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),me1)){
+			setUvBlock(4,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),me2)){
+			setUvBlock(4,meio);
+		}
+
+		//meio direita
+		if(compararListas(blocosEmVolta.ToArray(),md)){
+			setUvBlock(6,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),md1)){
+			setUvBlock(6,meio);
+		}
+		if(compararListas(blocosEmVolta.ToArray(),md2)){
+			setUvBlock(6,meio);
+		}
+
+		blocosEmVolta.Clear();
+	}
+
+	bool compararListas(int[] lista1,int[] lista2){
+		bool resultado = false;
+		if( lista1[0] == lista2[0] &&
+			lista1[1] == lista2[1] &&
+			lista1[2] == lista2[2] &&
+			lista1[3] == lista2[3] &&
+			lista1[4] == lista2[4] &&
+			lista1[5] == lista2[5] &&
+			lista1[6] == lista2[6] &&
+			lista1[7] == lista2[7] &&
+			lista1[8] == lista2[8])
+		{
+			return resultado = true;
+		}else{
+			return resultado = false;
+		}
 	}
 }
