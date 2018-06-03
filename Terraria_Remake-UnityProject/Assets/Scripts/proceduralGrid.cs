@@ -68,7 +68,7 @@ public class proceduralGrid : MonoBehaviour {
 		}
 
 		//DELETAR BLOCO
-		if (Input.GetKey(KeyCode.Mouse0)) {
+		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
 
 			int posX =  Mathf.FloorToInt(Mathf.Round(p.x - 0.5f));
@@ -174,10 +174,8 @@ public class proceduralGrid : MonoBehaviour {
 		estadoBloco[idBloco+1] = 0;
 		estadoBloco[idBloco+2] = 0;
 		estadoBloco[idBloco+3] = 0;
-		estadoBloco[idBloco+4] = 0;
-		estadoBloco[idBloco+5] = 0;
 
-		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
+		//updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 		updateRefreshUvGrid ();
 		print("Removeu o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
@@ -190,12 +188,11 @@ public class proceduralGrid : MonoBehaviour {
 		trianglesList.Add(idBloco+2);
 		trianglesList.Add(idBloco+1);
 		trianglesList.Add(idBloco+3);
+
 		estadoBloco [idBloco] = 1;
 		estadoBloco[idBloco+1] = 1;
 		estadoBloco[idBloco+2] = 1;
 		estadoBloco[idBloco+3] = 1;
-		estadoBloco[idBloco+4] = 1;
-		estadoBloco[idBloco+5] = 1;
 
 		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
 		updateRefreshUvGrid ();

@@ -39,8 +39,34 @@ public class refreshUvGrid : MonoBehaviour {
 				}
 			}
 			updateUV ();
-			print ("script RefreshUV atualizou a UVLIST!");
 		}
+
+		if(Input.GetKeyDown(KeyCode.Mouse0)){
+			for(int x = 0;x < gridSizeX;x++){
+				for(int y = 0;y < gridSizeY;y++){
+					definirTextureBloco (x,y);
+				}
+			}
+			updateUV ();
+		}
+
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+
+			Vector2 p = Camera.main.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y,0));
+
+			int posX =  Mathf.FloorToInt(Mathf.Round(p.x - 0.5f));
+			int posY = Mathf.FloorToInt(Mathf.Round(p.y - 0.5f));
+
+			int indexBloco = (posY + (posX * 100)) * 4;
+
+			print(estadoBloco[indexBloco]);
+			print(estadoBloco[indexBloco+1]);
+			print(estadoBloco[indexBloco+2]);
+			print(estadoBloco[indexBloco+3]);
+			print(estadoBloco[indexBloco+4]);
+			print(estadoBloco[indexBloco+5]);
+		}
+
 	}
 		
 	void updateUV(){
@@ -49,6 +75,12 @@ public class refreshUvGrid : MonoBehaviour {
 		mesh.triangles = triangles;
 		mesh.uv = uvs;
 		mesh.RecalculateNormals ();
+	}
+
+
+	void trocarTexutaBloco(int idBloco,int indexBloco){
+		setUvBlock(idBloco,indexBloco);
+		updateUV();
 	}
 
 	void setUvBlock (int _idTypeBloco, int _idUv) {
@@ -133,7 +165,7 @@ public class refreshUvGrid : MonoBehaviour {
 		}
 	}
 
-	void definirTextureBloco(int posX, int posY){
+	public void definirTextureBloco(int posX, int posY){
 		int[] sequencia;
 		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
 		int cimaEsquerda = (posY + (posX * gridSizeY) - 99) * 4;
@@ -427,19 +459,19 @@ public class refreshUvGrid : MonoBehaviour {
 								1,1,1,
 								1,1,1	};
 
-		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
 		sequencia = new int[9]{	1,0,0,
 								1,1,1,
 								1,1,1	};
 
-		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
 		sequencia = new int[9]{	0,0,0,
 								1,1,1,
 								1,1,1	};
 
-		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
 		//cima
 		sequencia = new int[9]{	1,1,1,
@@ -485,6 +517,12 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
 
+		sequencia = new int[9]{	1,1,1,
+								0,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
 		//meio direita
 		sequencia = new int[9]{	1,1,0,
 								1,1,0,
@@ -499,6 +537,18 @@ public class refreshUvGrid : MonoBehaviour {
 		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
 		sequencia = new int[9]{	1,1,0,
+								1,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								1,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,1,
 								1,1,0,
 								1,1,1	};
 
