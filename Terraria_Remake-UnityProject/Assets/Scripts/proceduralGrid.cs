@@ -68,7 +68,7 @@ public class proceduralGrid : MonoBehaviour {
 		}
 
 		//DELETAR BLOCO
-		if (Input.GetKeyDown(KeyCode.Mouse0)) {
+		if (Input.GetKey(KeyCode.Mouse0)) {
 			Vector2 p = myCam.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
 
 			int posX =  Mathf.FloorToInt(Mathf.Round(p.x - 0.5f));
@@ -82,11 +82,6 @@ public class proceduralGrid : MonoBehaviour {
 		//UPDATE COLISAO
 		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) ){
 			updateCol ();
-			/*for(int x = 0;x<= gridSizeX;x++){
-				for(int y = 0;y<= gridSizeX;y++){
-					definirTextureBloco (x,y);
-				}
-			}*/
 		}
 
 		//CRIAR BLOCO
@@ -105,7 +100,7 @@ public class proceduralGrid : MonoBehaviour {
 	void updateRefreshUvGrid(){
 		GetComponent<refreshUvGrid> ().vertices = verticesList.ToArray ();
 		GetComponent<refreshUvGrid> ().triangles = trianglesList.ToArray ();
-		GetComponent<refreshUvGrid> ().uvs = uvList.ToArray ();
+
 		GetComponent<refreshUvGrid> ().estadoBloco = estadoBloco.ToArray ();
 	}
 
@@ -158,6 +153,8 @@ public class proceduralGrid : MonoBehaviour {
 
 			}
 		}
+
+		GetComponent<refreshUvGrid> ().uvs = uvList.ToArray ();
 
 	}
 

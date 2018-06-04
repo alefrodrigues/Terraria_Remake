@@ -35,19 +35,15 @@ public class refreshUvGrid : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Z)){
 			for(int x = 0;x < gridSizeX;x++){
 				for(int y = 0;y < gridSizeY;y++){
-					definirTextureBloco (x,y);
+					definirTexturaMeshGrid (x,y);
 				}
 			}
 			updateUV ();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Mouse0)){
-			for(int x = 0;x < gridSizeX;x++){
-				for(int y = 0;y < gridSizeY;y++){
-					definirTextureBloco (x,y);
-				}
-			}
-			updateUV ();
+		if(Input.GetKey(KeyCode.Mouse0)){
+			definirTexturaBloco ();
+
 		}
 
 		if(Input.GetKeyDown(KeyCode.Alpha1)){
@@ -59,12 +55,7 @@ public class refreshUvGrid : MonoBehaviour {
 
 			int indexBloco = (posY + (posX * 100)) * 4;
 
-			print(estadoBloco[indexBloco]);
-			print(estadoBloco[indexBloco+1]);
-			print(estadoBloco[indexBloco+2]);
-			print(estadoBloco[indexBloco+3]);
-			print(estadoBloco[indexBloco+4]);
-			print(estadoBloco[indexBloco+5]);
+			trocarTexutaBloco (14, indexBloco);
 		}
 
 	}
@@ -76,6 +67,7 @@ public class refreshUvGrid : MonoBehaviour {
 		mesh.uv = uvs;
 		mesh.RecalculateNormals ();
 	}
+
 
 
 	void trocarTexutaBloco(int idBloco,int indexBloco){
@@ -143,7 +135,7 @@ public class refreshUvGrid : MonoBehaviour {
 			case 8:
 				//baixo
 			uvs [_idUv] = new Vector2(0.25f,0f);
-			uvs [_idUv+1] = new Vector2(0.25f,.5f);
+			uvs [_idUv+1] = new Vector2(0.25f,0.75f);
 			uvs [_idUv+2] = new Vector2(0.75f,0f);
 			uvs [_idUv+3] = new Vector2(0.75f,0.75f);
 				break;
@@ -161,11 +153,75 @@ public class refreshUvGrid : MonoBehaviour {
 			uvs [_idUv+2] = new Vector2(1f,0f);
 			uvs [_idUv+3] = new Vector2(1f,1f);
 				break;
+			case 11:
+			//bloco ponta cima
+			uvs [_idUv] = new Vector2(0f,0.25f);
+			uvs [_idUv+1] = new Vector2(0f,1f);
+			uvs [_idUv+2] = new Vector2(1f,0.25f);
+			uvs [_idUv+3] = new Vector2(1f,1f);
+				break;
+			case 12:
+			//bloco ponta baixo
+			uvs [_idUv] = new Vector2(0f,0f);
+			uvs [_idUv+1] = new Vector2(0f,0.75f);
+			uvs [_idUv+2] = new Vector2(1f,0f);
+			uvs [_idUv+3] = new Vector2(1f,0.75f);
+			break;
+			case 13:
+			//bloco ponta esquerda
+			uvs [_idUv] = new Vector2(0f,0f);
+			uvs [_idUv+1] = new Vector2(0f,1f);
+			uvs [_idUv+2] = new Vector2(0.75f,0f);
+			uvs [_idUv+3] = new Vector2(0.75f,1f);
+			break;
+			case 14:
+			//bloco ponta direita
+			uvs [_idUv] = new Vector2(0.25f,0f);
+			uvs [_idUv+1] = new Vector2(0.25f,1f);
+			uvs [_idUv+2] = new Vector2(1f,0f);
+			uvs [_idUv+3] = new Vector2(1f,1f);
+			break;
+			case 15:
+			//bloco meio vertical
+			uvs [_idUv] = new Vector2(0f,0.25f);
+			uvs [_idUv+1] = new Vector2(0f,0.75f);
+			uvs [_idUv+2] = new Vector2(1f,0.25f);
+			uvs [_idUv+3] = new Vector2(1f,0.75f);
+				break;
+			case 16:
+			//bloco meio horizontal
+			uvs [_idUv] = new Vector2(0.25f,0f);
+			uvs [_idUv+1] = new Vector2(0.25f,1f);
+			uvs [_idUv+2] = new Vector2(0.75f,0f);
+			uvs [_idUv+3] = new Vector2(0.75f,1f);
+				break;
 
 		}
 	}
+	public void definirTexturaBloco(){
+		Vector2 p = Camera.main.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y,0));
 
-	public void definirTextureBloco(int posX, int posY){
+		Vector2 cimaE = new Vector2 (p.x-1,p.y+1);
+		Vector2 cima = new Vector2 (p.x,p.y+1);
+		Vector2 cimaD = new Vector2 (p.x+1,p.y+1);
+		Vector2 mE = new Vector2 (p.x-1,p.y);
+		Vector2 mD = new Vector2 (p.x+1,p.y);
+		Vector2 baixoE = new Vector2 (p.x-1,p.y-1);
+		Vector2 baixo = new Vector2 (p.x,p.y-1);
+		Vector2 baixoD = new Vector2 (p.x+1,p.y-1);
+
+		definirTexturaMeshGrid (Mathf.FloorToInt(cimaE.x),Mathf.FloorToInt(cimaE.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(cima.x),Mathf.FloorToInt(cima.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(cimaD.x),Mathf.FloorToInt(cimaD.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(mE.x),Mathf.FloorToInt(mE.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(mD.x),Mathf.FloorToInt(mD.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(baixoE.x),Mathf.FloorToInt(baixoE.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(baixo.x),Mathf.FloorToInt(baixo.y));
+		definirTexturaMeshGrid (Mathf.FloorToInt(baixoD.x),Mathf.FloorToInt(baixoD.y));
+
+		updateUV ();
+	}
+	public void definirTexturaMeshGrid(int posX, int posY){
 		int[] sequencia;
 		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
 		int cimaEsquerda = (posY + (posX * gridSizeY) - 99) * 4;
@@ -225,6 +281,12 @@ public class refreshUvGrid : MonoBehaviour {
 		8 = baixo
 		9 = baixoDireita
 		10 = blocoInteiro
+		11 = pontaCima
+		12 = pontaBaixo
+		13 = pontaEsquerda
+		14 = pontaDireita
+		15 = meioVertical
+		16 = meioHorizontal
 		*/
 		blocosEmVolta.Add(estadoBloco[cimaEsquerda]);
 		blocosEmVolta.Add(estadoBloco[cima]);
@@ -246,13 +308,104 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,5,meio);
 
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
 		sequencia = new int[9]{	0,0,0,
 								0,1,0,
 								0,0,0	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
 
-		//cima esquerda
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,10,meio);
+
+		//------------------CIMA ESQUERDA-----------------
 		sequencia = new int[9]{	0,0,1,
 								0,1,1,
 								1,1,1	};
@@ -301,7 +454,58 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
 
-		//cima direita
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,1,meio);
+
+		//------------FIM-------------
+
+
+		//-----------------CIMA DIREITA ----------
 		sequencia = new int[9]{	1,0,0,
 								1,1,0,
 								1,1,1	};
@@ -350,7 +554,58 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
 
-		//baixo direita
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,3,meio);
+
+		//------------FIM-------------
+
+
+		//---------------BAIXO DIREITA
 		sequencia = new int[9]{	1,1,1,
 								1,1,0,
 								1,0,0	};
@@ -399,7 +654,64 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
 
-		//baixo esquerda
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,9,meio);
+
+		//------------FIM-------------
+
+
+		//--------------BAIXO ESQUERDA
 		sequencia = new int[9]{	1,1,1,
 								0,1,1,
 								0,0,1	};
@@ -448,10 +760,80 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
 
-		//baixo
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,7,meio);
+
+		//------------FIM-------------
+
+
+		//-----------------BAIXO-----------
+
 		sequencia = new int[9]{	1,0,1,
 								1,1,1,
 								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								0,1,0	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
@@ -461,9 +843,45 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
 		sequencia = new int[9]{	1,0,0,
 								1,1,1,
 								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								0,1,0	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
@@ -473,8 +891,43 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
 
-		//cima
+		sequencia = new int[9]{	0,0,0,
+								1,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,2,meio);
+
+		//------------FIM-------------
+
+
+		//--------------CIMA----------
+
+
 		sequencia = new int[9]{	1,1,1,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	0,1,0,
 								1,1,1,
 								1,0,1	};
 
@@ -486,7 +939,43 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
 
+		sequencia = new int[9]{	0,1,1,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
 		sequencia = new int[9]{	1,1,1,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
+
+		sequencia = new int[9]{	0,1,0,
 								1,1,1,
 								1,0,0	};
 
@@ -498,8 +987,81 @@ public class refreshUvGrid : MonoBehaviour {
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,8,meio);
 
-		//meio esquerda
+
+
+		//------------FIM-------------
+
+
+
+
+		//-------------MEIO ESQUERDA--------
 		sequencia = new int[9]{	0,1,1,
+								0,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,1,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,1,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,1,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,1,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,1,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,1,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		sequencia = new int[9]{	1,1,0,
 								0,1,1,
 								0,1,1	};
 
@@ -507,30 +1069,70 @@ public class refreshUvGrid : MonoBehaviour {
 
 		sequencia = new int[9]{	1,1,1,
 								0,1,1,
-								1,1,1	};
+								0,1,0	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
 
-		sequencia = new int[9]{	0,1,1,
-								0,1,1,
-								1,1,1	};
+		//------------FIM-------------
 
-		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+
+		//------------MEIO DIREITA-------
+
+		sequencia = new int[9]{	1,1,0,
+								1,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
 		sequencia = new int[9]{	1,1,1,
-								0,1,1,
+								1,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								1,1,0,
 								0,1,1	};
 
-		compararListas(blocosEmVolta.ToArray(),sequencia,4,meio);
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
-		//meio direita
-		sequencia = new int[9]{	1,1,0,
+		sequencia = new int[9]{	0,1,1,
 								1,1,0,
-								1,1,0	};
+								0,1,1	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
-		sequencia = new int[9]{	1,1,1,
+		sequencia = new int[9]{	1,1,0,
+								1,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,0,
 								1,1,0,
 								1,1,1	};
 
@@ -538,7 +1140,13 @@ public class refreshUvGrid : MonoBehaviour {
 
 		sequencia = new int[9]{	1,1,0,
 								1,1,0,
-								1,1,1	};
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								1,1,0,
+								0,1,1	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
@@ -550,12 +1158,640 @@ public class refreshUvGrid : MonoBehaviour {
 
 		sequencia = new int[9]{	0,1,1,
 								1,1,0,
-								1,1,1	};
+								1,1,0	};
 
 		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
 
+		sequencia = new int[9]{	1,1,1,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								1,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,6,meio);
+
+
+		//------------FIM-------------
+
+
+
+		//------------PONTA CIMA----------
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,11,meio);
+
+
+		//------------FIM-------------
+
+
+
+		//--------------PONTA BAIXO------
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								0,0,1	};
 		
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		//------------FIM-------------
+
+
+		//-------------BLOCO PONTA ESQUERDA-------------
+
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								0,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,13,meio);
+
+		//-----------------FIM-------------
+
+
+
+		//---------------PONTA DIREITA----------
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,0,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,14,meio);
+
+		//--------------FiM-----------
+
+
+		//---------------MEIO VERTICAL----------
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,1,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								0,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								1,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								1,1,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		sequencia = new int[9]{	0,1,1,
+								0,1,0,
+								0,1,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,15,meio);
+
+		//--------------FIM-----------
+
+
+		//--------------MEIO HORIZONTAL----------
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,0,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,0,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								0,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	1,0,1,
+								1,1,1,
+								1,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		sequencia = new int[9]{	0,0,1,
+								1,1,1,
+								1,0,1	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,16,meio);
+
+		//--------------FIM-----------
+
+
+
 		blocosEmVolta.Clear();
+
+		updateUV ();
+
 	}
 
 	void compararListas(int[] blocosEmVolta,int[] sequencia,int idTypeBloco,int indexBloco){
