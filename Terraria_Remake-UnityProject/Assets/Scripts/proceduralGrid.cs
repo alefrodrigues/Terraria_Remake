@@ -10,6 +10,7 @@ public class proceduralGrid : MonoBehaviour {
 	public List <Vector2> uvList = new List <Vector2>();
 	public List <Vector2> colList = new List <Vector2>();
 	public List <int> trianglesList = new List <int>();
+	public List <float> tipoBloco = new List <float>();
 	public List <int> estadoBloco = new List <int>();
 
 	//colisoes da MeshGrid
@@ -133,11 +134,19 @@ public class proceduralGrid : MonoBehaviour {
 				colList.Add(new Vector3 (x+1,y,0));
 				colList.Add(new Vector3 (x+1,y+1,0));
 
+				//tipo do bloco
+				tipoBloco.Add(2);
+				tipoBloco.Add(2);
+				tipoBloco.Add(2);
+				tipoBloco.Add(2);
+				tipoBloco.Add(2);
+				tipoBloco.Add(2);
+
 				//populando lista de Uvs
-				uvList.Add(new Vector2(0.25f,0.25f));
-				uvList.Add(new Vector2(0.25f,0.75f));
-				uvList.Add(new Vector2(0.75f,0.25f));
-				uvList.Add(new Vector2(0.75f,0.75f));
+				uvList.Add(new Vector2(0.25f,0.666666f));
+				uvList.Add(new Vector2(0.25f,0.999999f));
+				uvList.Add(new Vector2(0.3125f,0.666666f));
+				uvList.Add(new Vector2(0.3125f,0.999999f));
 
 
 				//estado do bloco
@@ -148,6 +157,8 @@ public class proceduralGrid : MonoBehaviour {
 				estadoBloco.Add(1);
 				estadoBloco.Add(1);
 
+
+
 				v += 4;
 				t += 6;
 
@@ -155,6 +166,7 @@ public class proceduralGrid : MonoBehaviour {
 		}
 
 		GetComponent<refreshUvGrid> ().uvs = uvList.ToArray ();
+		GetComponent<refreshUvGrid> ().tipoBloco = tipoBloco.ToArray ();
 
 	}
 

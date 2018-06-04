@@ -10,6 +10,7 @@ public class refreshUvGrid : MonoBehaviour {
 	public Vector2[] uvs;
 	public int[] triangles;
 	public int[] estadoBloco;
+	public float[] tipoBloco;
 
 	List <int> blocosEmVolta = new List <int> ();
 
@@ -75,125 +76,143 @@ public class refreshUvGrid : MonoBehaviour {
 		updateUV();
 	}
 
-	void setUvBlock (int _idTypeBloco, int _idUv) {
-		// 0 = baixoEsquerda, 1 = cimaEsquerda, 2 = baixoDireita, 3 = cimaDireita, 4 = meio, 5 = cima, 6 = baixo
-		// 7 = meioEsquerda, 8 = meioDireita
-		switch (_idTypeBloco)
+	void setUvBlock (int idVariacaoBloco, int _idUv) {
+		//total de blocos na HORIZONTAL
+		float totalBlocosHorizontal = 16;
+
+		//total de blocos na VERTICAL
+		float totalBlocosVertical = 3;
+
+		//posiçoes da UV;
+		float posX = (1 / totalBlocosHorizontal);
+		float posY = (1 / totalBlocosVertical);
+
+		if(tipoBloco[_idUv] == 0){
+			posY = 0;
+		}
+		else if(tipoBloco[_idUv] == 1){
+			posY = (1 / totalBlocosVertical);
+		}
+		else if(tipoBloco[_idUv] == 2){
+			posY = (1 / totalBlocosVertical)*2;
+		}
+
+		switch (idVariacaoBloco)
 		{
 
 
 			case 1:
 				//cima esquerda
-			uvs [_idUv] = new Vector2(0f,0.5f);
-			uvs [_idUv+1] = new Vector2(0f,1f);
-			uvs [_idUv+2] = new Vector2(0.5f,0.5f);
-			uvs [_idUv+3] = new Vector2(0.5f,1f);
+			uvs [_idUv] = new Vector2(posX-posX,posY);
+			uvs [_idUv+1] = new Vector2(posX-posX,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX,posY);
+			uvs [_idUv+3] = new Vector2(posX,posY+(1 / totalBlocosVertical));
 				break;
 			case 2:
 				//cima
-			uvs [_idUv] = new Vector2(0.25f,0.5f);
-			uvs [_idUv+1] = new Vector2(0.25f,1f);
-			uvs [_idUv+2] = new Vector2(0.75f,0.5f);
-			uvs [_idUv+3] = new Vector2(0.75f,1f);
+			uvs [_idUv] = new Vector2(posX,posY);
+			uvs [_idUv+1] = new Vector2(posX,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*2,posY);
+			uvs [_idUv+3] = new Vector2(posX*2,posY+(1 / totalBlocosVertical));
 				break;
 			case 3:
 				//cima direita
-			uvs [_idUv] = new Vector2(0.5f,0.5f);
-			uvs [_idUv+1] = new Vector2(0.5f,1f);
-			uvs [_idUv+2] = new Vector2(1f,0.5f);
-			uvs [_idUv+3] = new Vector2(1f,1f);
+			uvs [_idUv] = new Vector2(posX*2,posY);
+			uvs [_idUv+1] = new Vector2(posX*2,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*3,posY);
+			uvs [_idUv+3] = new Vector2(posX*3,posY+(1 / totalBlocosVertical));
 				break;
 
 			case 4:
 				//meio esquerda
-			uvs [_idUv] = new Vector2(0f,0.25f);
-			uvs [_idUv+1] = new Vector2(0f,0.75f);
-			uvs [_idUv+2] = new Vector2(0.5f,0.25f);
-			uvs [_idUv+3] = new Vector2(0.5f,0.75f);
+			uvs [_idUv] = new Vector2(posX*3,posY);
+			uvs [_idUv+1] = new Vector2(posX*3,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*4,posY);
+			uvs [_idUv+3] = new Vector2(posX*4,posY+(1 / totalBlocosVertical));
 				break;
 			case 5:
 				//meio
-			uvs [_idUv] = new Vector2(0.25f,0.25f);
-			uvs [_idUv+1] = new Vector2(0.25f,0.75f);
-			uvs [_idUv+2] = new Vector2(0.75f,0.25f);
-			uvs [_idUv+3] = new Vector2(0.75f,0.75f);
+			uvs [_idUv] = new Vector2(posX+(posX*3),posY);
+			uvs [_idUv+1] = new Vector2(posX+(posX*3),posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX+(posX*4),posY);
+			uvs [_idUv+3] = new Vector2(posX+(posX*4),posY+(1 / totalBlocosVertical));
 				break;
 			case 6:
 				//meio direita
-			uvs [_idUv] = new Vector2(0.5f,0.25f);
-			uvs [_idUv+1] = new Vector2(0.5f,0.75f);
-			uvs [_idUv+2] = new Vector2(1f,0.25f);
-			uvs [_idUv+3] = new Vector2(1f,0.75f);
+			uvs [_idUv] = new Vector2(posX*5,posY);
+			uvs [_idUv+1] = new Vector2(posX*5,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*6,posY);
+			uvs [_idUv+3] = new Vector2(posX*6,posY+(1 / totalBlocosVertical));
 				break;
 			case 7:
 				//baixo esquerda
-			uvs[_idUv] = new Vector2(0f,0f);
-			uvs[_idUv+1] = new Vector2(0f,0.5f);
-			uvs[_idUv+2] = new Vector2(0.5f,0f);
-			uvs[_idUv+3] = new Vector2(0.5f,0.5f);
+			uvs [_idUv] = new Vector2(posX*6,posY);
+			uvs [_idUv+1] = new Vector2(posX*6,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*7,posY);
+			uvs [_idUv+3] = new Vector2(posX*7,posY+(1 / totalBlocosVertical));
 				break;
 			case 8:
 				//baixo
-			uvs [_idUv] = new Vector2(0.25f,0f);
-			uvs [_idUv+1] = new Vector2(0.25f,0.75f);
-			uvs [_idUv+2] = new Vector2(0.75f,0f);
-			uvs [_idUv+3] = new Vector2(0.75f,0.75f);
+			uvs [_idUv] = new Vector2(posX*7,posY);
+			uvs [_idUv+1] = new Vector2(posX*7,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*8,posY);
+			uvs [_idUv+3] = new Vector2(posX*8,posY+(1 / totalBlocosVertical));
 				break;
 			case 9:
 				//baixo direita
-			uvs [_idUv] = new Vector2(0.5f,0f);
-			uvs [_idUv+1] = new Vector2(0.5f,0.5f);
-			uvs [_idUv+2] = new Vector2(1f,0f);
-			uvs [_idUv+3] = new Vector2(1f,0.5f);
+			uvs [_idUv] = new Vector2(posX*8,posY);
+			uvs [_idUv+1] = new Vector2(posX*8,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*9,posY);
+			uvs [_idUv+3] = new Vector2(posX*9,posY+(1 / totalBlocosVertical));
 				break;
 			case 10:
 				//bloco inteiro
-			uvs [_idUv] = new Vector2(0f,0f);
-			uvs [_idUv+1] = new Vector2(0f,1f);
-			uvs [_idUv+2] = new Vector2(1f,0f);
-			uvs [_idUv+3] = new Vector2(1f,1f);
+			uvs [_idUv] = new Vector2(posX*9,posY);
+			uvs [_idUv+1] = new Vector2(posX*9,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*10,posY);
+			uvs [_idUv+3] = new Vector2(posX*10,posY+(1 / totalBlocosVertical));
 				break;
 			case 11:
 			//bloco ponta cima
-			uvs [_idUv] = new Vector2(0f,0.25f);
-			uvs [_idUv+1] = new Vector2(0f,1f);
-			uvs [_idUv+2] = new Vector2(1f,0.25f);
-			uvs [_idUv+3] = new Vector2(1f,1f);
+			uvs [_idUv] = new Vector2(posX*10,posY);
+			uvs [_idUv+1] = new Vector2(posX*10,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*11,posY);
+			uvs [_idUv+3] = new Vector2(posX*11,posY+(1 / totalBlocosVertical));
 				break;
 			case 12:
 			//bloco ponta baixo
-			uvs [_idUv] = new Vector2(0f,0f);
-			uvs [_idUv+1] = new Vector2(0f,0.75f);
-			uvs [_idUv+2] = new Vector2(1f,0f);
-			uvs [_idUv+3] = new Vector2(1f,0.75f);
+			uvs [_idUv] = new Vector2(posX*11,posY);
+			uvs [_idUv+1] = new Vector2(posX*11,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*12,posY);
+			uvs [_idUv+3] = new Vector2(posX*12,posY+(1 / totalBlocosVertical));
 			break;
 			case 13:
 			//bloco ponta esquerda
-			uvs [_idUv] = new Vector2(0f,0f);
-			uvs [_idUv+1] = new Vector2(0f,1f);
-			uvs [_idUv+2] = new Vector2(0.75f,0f);
-			uvs [_idUv+3] = new Vector2(0.75f,1f);
+			uvs [_idUv] = new Vector2(posX*12,posY);
+			uvs [_idUv+1] = new Vector2(posX*12,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*13,posY);
+			uvs [_idUv+3] = new Vector2(posX*13,posY+(1 / totalBlocosVertical));
 			break;
 			case 14:
 			//bloco ponta direita
-			uvs [_idUv] = new Vector2(0.25f,0f);
-			uvs [_idUv+1] = new Vector2(0.25f,1f);
-			uvs [_idUv+2] = new Vector2(1f,0f);
-			uvs [_idUv+3] = new Vector2(1f,1f);
+			uvs [_idUv] = new Vector2(posX*13,posY);
+			uvs [_idUv+1] = new Vector2(posX*13,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*14,posY);
+			uvs [_idUv+3] = new Vector2(posX*14,posY+(1 / totalBlocosVertical));
 			break;
 			case 15:
 			//bloco meio vertical
-			uvs [_idUv] = new Vector2(0f,0.25f);
-			uvs [_idUv+1] = new Vector2(0f,0.75f);
-			uvs [_idUv+2] = new Vector2(1f,0.25f);
-			uvs [_idUv+3] = new Vector2(1f,0.75f);
+			uvs [_idUv] = new Vector2(posX*14,posY);
+			uvs [_idUv+1] = new Vector2(posX*14,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*15,posY);
+			uvs [_idUv+3] = new Vector2(posX*15,posY+(1 / totalBlocosVertical));
 				break;
 			case 16:
 			//bloco meio horizontal
-			uvs [_idUv] = new Vector2(0.25f,0f);
-			uvs [_idUv+1] = new Vector2(0.25f,1f);
-			uvs [_idUv+2] = new Vector2(0.75f,0f);
-			uvs [_idUv+3] = new Vector2(0.75f,1f);
+			uvs [_idUv] = new Vector2(posX*15,posY);
+			uvs [_idUv+1] = new Vector2(posX*15,posY+(1 / totalBlocosVertical));
+			uvs [_idUv+2] = new Vector2(posX*16,posY);
+			uvs [_idUv+3] = new Vector2(posX*16,posY+(1 / totalBlocosVertical));
 				break;
 
 		}
@@ -288,6 +307,7 @@ public class refreshUvGrid : MonoBehaviour {
 		15 = meioVertical
 		16 = meioHorizontal
 		*/
+
 		blocosEmVolta.Add(estadoBloco[cimaEsquerda]);
 		blocosEmVolta.Add(estadoBloco[cima]);
 		blocosEmVolta.Add(estadoBloco[cimaDireita]);
@@ -297,9 +317,6 @@ public class refreshUvGrid : MonoBehaviour {
 		blocosEmVolta.Add(estadoBloco[baixoEsquerda]);
 		blocosEmVolta.Add(estadoBloco[baixo]);
 		blocosEmVolta.Add(estadoBloco[baixoDireita]);
-		/*print(  blocosEmVolta[0] +  ","+blocosEmVolta[1] +  ","+blocosEmVolta[2] +  ","+
-				blocosEmVolta[3] +  ","+blocosEmVolta[4] +  ","+blocosEmVolta[5] +  ","+
-				blocosEmVolta[6] +  ","+blocosEmVolta[7] +  ","+blocosEmVolta[8]);*/
 
 		//nada
 		sequencia = new int[9]{	1,1,1,
