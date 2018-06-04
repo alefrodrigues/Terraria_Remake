@@ -101,7 +101,6 @@ public class proceduralGrid : MonoBehaviour {
 	void updateRefreshUvGrid(){
 		GetComponent<refreshUvGrid> ().vertices = verticesList.ToArray ();
 		GetComponent<refreshUvGrid> ().triangles = trianglesList.ToArray ();
-
 		GetComponent<refreshUvGrid> ().estadoBloco = estadoBloco.ToArray ();
 	}
 
@@ -156,9 +155,7 @@ public class proceduralGrid : MonoBehaviour {
 				estadoBloco.Add(1);
 				estadoBloco.Add(1);
 				estadoBloco.Add(1);
-
-
-
+				
 				v += 4;
 				t += 6;
 

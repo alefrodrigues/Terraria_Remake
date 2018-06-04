@@ -33,14 +33,6 @@ public class refreshUvGrid : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Z)){
-			for(int x = 0;x < gridSizeX;x++){
-				for(int y = 0;y < gridSizeY;y++){
-					definirTexturaMeshGrid (x,y);
-				}
-			}
-			updateUV ();
-		}
 
 		if(Input.GetKey(KeyCode.Mouse0)){
 			definirTexturaBloco ();
