@@ -6,12 +6,12 @@ public class proceduralGrid : MonoBehaviour {
 	List <int> blocosEmVolta = new List <int> ();
 
 	//arrays para montar a MeshGrid
-	public List <Vector3> verticesList = new List <Vector3>();
-	public List <Vector2> uvList = new List <Vector2>();
-	public List <Vector2> colList = new List <Vector2>();
-	public List <int> trianglesList = new List <int>();
-	public List <float> tipoBloco = new List <float>();
-	public List <int> estadoBloco = new List <int>();
+	public static List <Vector3> verticesList = new List <Vector3>();
+	public static List <Vector2> uvList = new List <Vector2>();
+	public static List <Vector2> colList = new List <Vector2>();
+	public static List <int> trianglesList = new List <int>();
+	public static List <int> tipoBloco = new List <int>();
+	public static List <int> estadoBloco = new List <int>();
 
 	//colisoes da MeshGrid
 	public MeshCollider meshCollider;
@@ -26,6 +26,8 @@ public class proceduralGrid : MonoBehaviour {
 	//mainCamera
 	public Camera myCam;
 
+	//autorizaçao para so chunks começar a se preencher de dados das listas principais
+	public static bool podePreencher;
 	
 
 	void Awake(){
@@ -40,8 +42,11 @@ public class proceduralGrid : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Space)){
 			makeDiscreteGrid();
 			updateMesh(verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
-			updateCol ();
-			updateRefreshUvGrid ();
+			//updateCol ();
+			//updateRefreshUvGrid ();
+
+			podePreencher = true;
+			print(verticesList.Count);
 		}
 		//DELETAR EM VOLTA
 		if(Input.GetKeyDown(KeyCode.C)){
@@ -82,7 +87,7 @@ public class proceduralGrid : MonoBehaviour {
 
 		//UPDATE COLISAO
 		if(Input.GetMouseButtonUp(0) || Input.GetMouseButtonUp(1) ){
-			updateCol ();
+			//updateCol ();
 		}
 
 		//CRIAR BLOCO
@@ -162,8 +167,8 @@ public class proceduralGrid : MonoBehaviour {
 			}
 		}
 
-		GetComponent<refreshUvGrid> ().uvs = uvList.ToArray ();
-		GetComponent<refreshUvGrid> ().tipoBloco = tipoBloco.ToArray ();
+		//GetComponent<refreshUvGrid> ().uvs = uvList.ToArray ();
+		//GetComponent<refreshUvGrid> ().tipoBloco = tipoBloco.ToArray ();
 
 	}
 
@@ -181,8 +186,8 @@ public class proceduralGrid : MonoBehaviour {
 		estadoBloco[idBloco+2] = 0;
 		estadoBloco[idBloco+3] = 0;
 
-		//updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
-		updateRefreshUvGrid ();
+		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
+		//updateRefreshUvGrid ();
 		print("Removeu o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
 
@@ -201,7 +206,7 @@ public class proceduralGrid : MonoBehaviour {
 		estadoBloco[idBloco+3] = 1;
 
 		updateMesh (verticesList.ToArray(),trianglesList.ToArray(),uvList.ToArray());
-		updateRefreshUvGrid ();
+		//updateRefreshUvGrid ();
 		print("Criou o bloco: " + idBloco + " estado = "+estadoBloco[idBloco]);
 	}
 	void deletarEmVolta(int posX ,int posY){
@@ -227,7 +232,7 @@ public class proceduralGrid : MonoBehaviour {
 		deletarBloco (baixo);
 		deletarBloco (baixoDireita);
 
-		updateRefreshUvGrid ();
+		//updateRefreshUvGrid ();
 	}
 
 	void criarEmVolta(int posX ,int posY){
@@ -255,15 +260,15 @@ public class proceduralGrid : MonoBehaviour {
 	}
 		
 	void updateMesh(Vector3[] _vertices,int[] _triangles,Vector2[] _uv){
-		mesh.Clear();
+		/*mesh.Clear();
 		mesh.vertices = _vertices;
 		mesh.triangles = _triangles;
 		mesh.uv = _uv;
-		mesh.RecalculateNormals();
+		mesh.RecalculateNormals();*/
 	}
 	void updateCol(){
 		GetComponent<MeshCollider> ().sharedMesh = null;
 		GetComponent<MeshCollider> ().sharedMesh = mesh;
-		updateRefreshUvGrid ();
+		//updateRefreshUvGrid ();
 	}
 }

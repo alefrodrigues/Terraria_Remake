@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class refreshUvGrid : MonoBehaviour {
 	public Vector2[] uvs;
 	public int[] triangles;
 	public int[] estadoBloco;
-	public float[] tipoBloco;
+	public int[] tipoBloco;
 
 	List <int> blocosEmVolta = new List <int> ();
 
@@ -27,11 +27,11 @@ public class refreshUvGrid : MonoBehaviour {
 		triangles = mesh.triangles;
 		uvs = mesh.uv;
 	}
-	// Use this for initialization
+
 	void Start () {
+
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 
 		if(Input.GetKey(KeyCode.Mouse0)){
@@ -68,7 +68,7 @@ public class refreshUvGrid : MonoBehaviour {
 		updateUV();
 	}
 
-	void setUvBlock (int idVariacaoBloco, int _idUv) {
+	void setUvBlock (int idDirecaoBloco, int _idUv) {
 		//total de blocos na HORIZONTAL
 		float totalBlocosHorizontal = 16;
 
@@ -89,7 +89,7 @@ public class refreshUvGrid : MonoBehaviour {
 			posY = (1 / totalBlocosVertical)*2;
 		}
 
-		switch (idVariacaoBloco)
+		switch (idDirecaoBloco)
 		{
 
 
@@ -209,6 +209,7 @@ public class refreshUvGrid : MonoBehaviour {
 
 		}
 	}
+
 	public void definirTexturaBloco(){
 		Vector2 p = Camera.main.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y,0));
 
@@ -232,6 +233,7 @@ public class refreshUvGrid : MonoBehaviour {
 
 		updateUV ();
 	}
+
 	public void definirTexturaMeshGrid(int posX, int posY){
 		int[] sequencia;
 		//formulas para identificar todos os blocos em volta do bloco a ser analisado 
@@ -1384,6 +1386,18 @@ public class refreshUvGrid : MonoBehaviour {
 		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
 
 		sequencia = new int[9]{	0,1,0,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	1,1,0,
+								0,1,0,
+								0,0,0	};
+
+		compararListas(blocosEmVolta.ToArray(),sequencia,12,meio);
+
+		sequencia = new int[9]{	0,1,1,
 								0,1,0,
 								0,0,0	};
 
