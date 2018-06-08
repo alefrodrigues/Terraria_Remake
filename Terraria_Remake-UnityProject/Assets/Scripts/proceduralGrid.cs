@@ -6,12 +6,12 @@ public class proceduralGrid : MonoBehaviour {
 	List <int> blocosEmVolta = new List <int> ();
 
 	//arrays para montar a MeshGrid
-	public static List <Vector3> verticesList = new List <Vector3>();
-	public static List <Vector2> uvList = new List <Vector2>();
-	public static List <Vector2> colList = new List <Vector2>();
-	public static List <int> trianglesList = new List <int>();
-	public static List <int> tipoBloco = new List <int>();
-	public static List <int> estadoBloco = new List <int>();
+	public List <Vector3> verticesList = new List <Vector3>();
+	public List <Vector2> uvList = new List <Vector2>();
+	public List <Vector2> colList = new List <Vector2>();
+	public List <int> trianglesList = new List <int>();
+	public List <int> tipoBloco = new List <int>();
+	public List <int> estadoBloco = new List <int>();
 
 	//colisoes da MeshGrid
 	public MeshCollider meshCollider;
@@ -118,26 +118,6 @@ public class proceduralGrid : MonoBehaviour {
 		for(int x = 0; x < gridSizeX; x++){
 			for(int y = 0; y < gridSizeY; y++){
 
-				//populando lista de Vertices
-				verticesList.Add(new Vector3 (x,y,0));
-				verticesList.Add(new Vector3 (x,y+1,0));
-				verticesList.Add(new Vector3 (x+1,y,0));
-				verticesList.Add(new Vector3 (x+1,y+1,0));
-
-				//populando lista de Triangulos
-				trianglesList.Add(v);
-				trianglesList.Add(v+1);
-				trianglesList.Add(v+2);
-				trianglesList.Add(v+2);
-				trianglesList.Add(v+1);
-				trianglesList.Add(v+3);
-
-				//populando lista de colisao
-				colList.Add(new Vector3 (x,y,0));
-				colList.Add(new Vector3 (x,y+1,0));
-				colList.Add(new Vector3 (x+1,y,0));
-				colList.Add(new Vector3 (x+1,y+1,0));
-
 				//tipo do bloco
 				tipoBloco.Add(2);
 				tipoBloco.Add(2);
@@ -174,12 +154,6 @@ public class proceduralGrid : MonoBehaviour {
 
 	void deletarBloco(int idBloco){
 		idBloco = idBloco * 4;
-		trianglesList.Remove(idBloco);
-		trianglesList.Remove(idBloco+1);
-		trianglesList.Remove(idBloco+2);
-		trianglesList.Remove(idBloco+2);
-		trianglesList.Remove(idBloco+1);
-		trianglesList.Remove(idBloco+3);
 
 		estadoBloco[idBloco] = 0;
 		estadoBloco[idBloco+1] = 0;
