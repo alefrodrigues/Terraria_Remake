@@ -53,12 +53,12 @@ public class proceduralGrid : MonoBehaviour {
 				tipoBloco.Add(2);
 
 				//material do bloco
-				materialBloco.Add(0);
-				materialBloco.Add(0);
-				materialBloco.Add(0);
-				materialBloco.Add(0);
-				materialBloco.Add(0);
-				materialBloco.Add(0);
+				materialBloco.Add(1);
+				materialBloco.Add(1);
+				materialBloco.Add(1);
+				materialBloco.Add(1);
+				materialBloco.Add(1);
+				materialBloco.Add(1);
 
 				//estado do bloco
 				estadoBloco.Add(1);

@@ -53,14 +53,31 @@ public class chunkControl : MonoBehaviour {
 			
 			int posX =  Mathf.FloorToInt(p.x);
 			int posY = Mathf.FloorToInt(p.y);
-			if((posX >= chunkX && posX <= chunkX + 100) && (posY >= chunkY && posY <= chunkY + 100)){
+
+			if(p.y > 99){
+				posX =  Mathf.FloorToInt(p.x - 1f);
+			}
+			if((posX >= chunkX && posX <= chunkX + 99) && (posY >= chunkY && posY <= chunkY + 99)){
 				deletarBloco(posX,posY);
 				definirTexturaBloco(p.x,p.y);
 			}
-
-
-
 		}
+
+		if(Input.GetKey(KeyCode.Mouse1)){
+			Vector2 p = Camera.main.ScreenToWorldPoint (new Vector3(Input.mousePosition.x,Input.mousePosition.y));
+			
+			int posX =  Mathf.FloorToInt(p.x);
+			int posY = Mathf.FloorToInt(p.y);
+
+			if(p.y > 99){
+				posX =  Mathf.FloorToInt(p.x - 1f);
+			}
+			if((posX >= chunkX && posX <= chunkX + 99) && (posY >= chunkY && posY <= chunkY + 99)){
+				criarBloco(posX,posY);
+				definirTexturaBloco(p.x,p.y);
+			}
+		}
+
 	}
 
 	void preencherChunk(){
@@ -78,7 +95,6 @@ public class chunkControl : MonoBehaviour {
 		for( int x = chunkX; x < chunkX + 100; x++){
 			for( int y = chunkY; y < chunkY+100; y++){
 				blocoAtual = (y + (x * pGrid.gridSizeY))*4;
-
 
 				//preenchendo vertices do chunk
 					chunkVerticesGrid.Add(new Vector3 (x,y,0));
@@ -132,10 +148,11 @@ public class chunkControl : MonoBehaviour {
 			}
 		}
 	}
+
 	void deletarBloco(int posX, int posY){
 		int blocoAtual = (posY + (posX * pGrid.gridSizeY))*4;
 
-		if(posX >= 100){
+		if(posX > 99){
 			posX -= chunkX;
 		}
 
@@ -163,6 +180,39 @@ public class chunkControl : MonoBehaviour {
 		updateMesh();
 
 	}
+
+	void criarBloco(int posX, int posY){
+
+		int blocoAtual = (posY + (posX * pGrid.gridSizeY))*4;
+
+		if(posX > 99){
+			posX -= chunkX;
+		}
+
+		int chunkBlocoAtual = (posY + (posX * 100))*4;
+
+		pGrid.estadoBloco[blocoAtual] = 1;
+		pGrid.estadoBloco[blocoAtual+1] = 1;
+		pGrid.estadoBloco[blocoAtual+2] = 1;
+		pGrid.estadoBloco[blocoAtual+3] = 1;
+
+		chunkEstadoBloco[chunkBlocoAtual] = 1;
+		chunkEstadoBloco[chunkBlocoAtual+1] = 1;
+		chunkEstadoBloco[chunkBlocoAtual+2] = 1;
+		chunkEstadoBloco[chunkBlocoAtual+3] = 1;
+
+		chunkTrianglesGrid.Add(chunkBlocoAtual);
+		chunkTrianglesGrid.Add(chunkBlocoAtual+1);
+		chunkTrianglesGrid.Add(chunkBlocoAtual+2);
+		chunkTrianglesGrid.Add(chunkBlocoAtual+2);
+		chunkTrianglesGrid.Add(chunkBlocoAtual+1);
+		chunkTrianglesGrid.Add(chunkBlocoAtual+3);
+
+		print(chunkEstadoBloco[chunkBlocoAtual]);
+
+		updateMesh();
+	}
+
 	public void updateMesh(){
 		mesh.Clear();
 		mesh.vertices = chunkVerticesGrid.ToArray();
@@ -184,6 +234,9 @@ public class chunkControl : MonoBehaviour {
 	}
 
 	void setUvBlock (int idDirecaoBloco, int indexBloco) {
+
+
+
 		//total de blocos na HORIZONTAL
 		float totalBlocosHorizontal = 16;
 
