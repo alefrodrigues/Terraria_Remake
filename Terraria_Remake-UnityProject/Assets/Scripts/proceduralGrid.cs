@@ -9,6 +9,10 @@ public class proceduralGrid : MonoBehaviour {
 	public List <int> materialBloco = new List <int>();
 	public List <int> estadoBloco = new List <int>();
 
+	public List <int> tipoBackgroundBloco = new List <int>();
+	public List <int> materialBackgroundBloco = new List <int>();
+	public List <int> estadoBackgroundBloco = new List <int>();
+
 	//tamanho da MeshGrid;
 	public int gridSizeX;
 	public int gridSizeY;
@@ -27,7 +31,7 @@ public class proceduralGrid : MonoBehaviour {
 	}
 	void Update(){
 		//CRIAR MESHGRID
-		if(Input.GetKeyDown(KeyCode.Space)){
+		if(Input.GetKeyDown(KeyCode.Space) && !podePreencher){
 			makeDiscreteGrid();
 
 			podePreencher = true;
@@ -40,10 +44,12 @@ public class proceduralGrid : MonoBehaviour {
 		int v = 0;
 		int t = 0;
 
+		int material = 0;
+		int estado = 1;
 		//Create vertex grid
 		for(int x = 0; x < gridSizeX; x++){
 			for(int y = 0; y < gridSizeY; y++){
-
+				material = Random.Range(0,3);
 				//tipo do bloco
 				tipoBloco.Add(2);
 				tipoBloco.Add(2);
@@ -52,21 +58,42 @@ public class proceduralGrid : MonoBehaviour {
 				tipoBloco.Add(2);
 				tipoBloco.Add(2);
 
+				tipoBackgroundBloco.Add(2);
+				tipoBackgroundBloco.Add(2);
+				tipoBackgroundBloco.Add(2);
+				tipoBackgroundBloco.Add(2);
+				tipoBackgroundBloco.Add(2);
+				tipoBackgroundBloco.Add(2);
+
 				//material do bloco
-				materialBloco.Add(1);
-				materialBloco.Add(1);
-				materialBloco.Add(1);
-				materialBloco.Add(1);
-				materialBloco.Add(1);
-				materialBloco.Add(1);
+				materialBloco.Add(material);
+				materialBloco.Add(material);
+				materialBloco.Add(material);
+				materialBloco.Add(material);
+				materialBloco.Add(material);
+				materialBloco.Add(material);
+
+				materialBackgroundBloco.Add(material);
+				materialBackgroundBloco.Add(material);
+				materialBackgroundBloco.Add(material);
+				materialBackgroundBloco.Add(material);
+				materialBackgroundBloco.Add(material);
+				materialBackgroundBloco.Add(material);
 
 				//estado do bloco
-				estadoBloco.Add(1);
-				estadoBloco.Add(1);
-				estadoBloco.Add(1);
-				estadoBloco.Add(1);
-				estadoBloco.Add(1);
-				estadoBloco.Add(1);
+				estadoBloco.Add(estado);
+				estadoBloco.Add(estado);
+				estadoBloco.Add(estado);
+				estadoBloco.Add(estado);
+				estadoBloco.Add(estado);
+				estadoBloco.Add(estado);
+
+				estadoBackgroundBloco.Add(estado);
+				estadoBackgroundBloco.Add(estado);
+				estadoBackgroundBloco.Add(estado);
+				estadoBackgroundBloco.Add(estado);
+				estadoBackgroundBloco.Add(estado);
+				estadoBackgroundBloco.Add(estado);
 				
 				v += 4;
 				t += 6;
