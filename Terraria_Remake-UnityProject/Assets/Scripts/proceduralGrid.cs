@@ -46,6 +46,11 @@ public class proceduralGrid : MonoBehaviour {
 
 		int material = 0;
 		int estado = 1;
+
+		float xOrg;
+		float yOrg = 100f;
+
+
 		//Create vertex grid
 		for(int x = 0; x < gridSizeX; x++){
 			for(int y = 0; y < gridSizeY; y++){

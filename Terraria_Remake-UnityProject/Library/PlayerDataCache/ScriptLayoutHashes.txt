@@ -1,10 +1,10 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Alef/Documents/GitHub/Terraria_Remake/Terraria_Remake-Build/Terraria_Remake-Build.exe
+C:/Users/Alef/Games/Games/Unity Projects/Terraria Remake/Terraria_Remake/Terraria_Remake-Build/Terraria_Remake-Build.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
-e3e2de34ab10384dae5fc57a6460dca6 Assembly-CSharp.dll:.chunkControl
+91791fd48e7192686b44f10547aaf7c7 Assembly-CSharp.dll:.chunkControl
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -115,8 +115,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-3dcc62aeba414eb5dc74af044d65b183 Assembly-CSharp.dll:.proceduralGrid
-ee44c501e866d87c513a30e6569ae9ef Assembly-CSharp.dll:.refreshUvGrid
+20edad47e834aa386bab6ff850244fcc Assembly-CSharp.dll:.proceduralGrid
 a723fbedae099b288a2c2e28fddfb6d7 Assembly-CSharp.dll:.sceneManager
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
